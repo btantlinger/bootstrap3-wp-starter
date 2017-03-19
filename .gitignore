@@ -1,0 +1,13 @@
+.vagrant/
+.idea/
+local-config.php
+production-config.php
+composer.lock
+data.sql
+puphpet/config-custom.yaml
+/vendor/
+/public/wp/
+/html/
+/node_modules/
+/bower_components/
+/public/wp-content/uploads/

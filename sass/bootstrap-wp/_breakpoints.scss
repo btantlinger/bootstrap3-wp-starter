@@ -1,0 +1,63 @@
+// breakpoints
+// Use  *-up for mobile first
+// Use  *-down for non-mobile first
+@mixin breakpoint($point) {
+  //
+  // large
+  //
+  @if $point == large-only {
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-min + 1) {
+      @content;
+    }
+  } @else if $point == large-up {
+    @media (min-width: $screen-lg-min) {
+      @content;
+    }
+  } @else if $point == large-down {
+    @media (max-width: $screen-lg-min - 1) {
+      @content;
+    }
+  }
+    //
+    // medium
+    //
+  @else if $point == medium-only {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      @content;
+    }
+  } @else if $point == medium-up {
+    @media (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if $point == medium-down {
+    @media (max-width: $screen-md-max) {
+      @content;
+    }
+  }
+    //
+    // small
+    //
+  @else if $point == small-only {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @content;
+    }
+  } @else if $point == small-up {
+    @media (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if $point == small-down {
+    @media (max-width: $screen-sm-max) {
+      @content;
+    }
+  }
+    //
+    // extra small
+    //
+  @else if $point == xsmall-down {
+    @media (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else {
+    @debug "The param #{$point} is not defined in breakpoint().";
+  }
+}
