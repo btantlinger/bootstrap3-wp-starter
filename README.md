@@ -1,4 +1,4 @@
-*Bootstrap3 Wordpress Starter Theme*
+#Bootstrap3 Wordpress Starter Theme
 
 A starter theme for wordpress that uses <a href="https://github.com/dannymachal/DevDmBootstrap3">DevDmBootstrap3</a> using sass for style customization.
 
