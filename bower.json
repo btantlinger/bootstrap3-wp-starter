@@ -17,6 +17,10 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "hover": "^2.1.0"
+    "hover": "^2.1.0",
+    "bootstrap-dropdown-hover": "^1.0.4",
+    "salvattore": "^1.0.9",
+    "ScrollToFixed": "jquery-scrolltofixed#^1.0.8",
+    "animate.css": "animate-css#^3.5.2"
   }
 }

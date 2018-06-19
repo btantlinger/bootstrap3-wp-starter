@@ -1,3 +1,39 @@
+$body-bg: #fafafa !default;
+
+$brand-primary: #337ab7 !default;
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #ff8700 !default;
+$brand-danger: #d9534f !default;
+
+$btn-primary-border: #337ab7 !default;
+$btn-warning-bg: $brand-warning !default;
+
+$font-family-sans-serif: Helvetica, sans-serif !default;
+$font-family-alt:  Helvetica, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+
+$navbar-default-bg: #f9fafb;
+$contact-dropdown-bg: #ff8700;
+
+$main-navbar-height: 80px;
+
+$inverse-bg: #333333;
+$inverse-fg: #fff;
+
+$alt-bg: #fff;
+$alt-fg: #333333;
+
+$alt2-bg: $inverse-bg; //$brand-primary;
+$alt2-fg: #fff;
+
+$section-pad-top: 60px;
+$section-pad-bottom: $section-pad-top;
+
+$well-bg:                     #fff !default;
+$border-color: #eaeaea !default;
+
+
 @import "bootstrap-wp/asset-helper";
 @import "bootstrap";
 @import "bootstrap/theme";

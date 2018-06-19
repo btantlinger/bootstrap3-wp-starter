@@ -224,19 +224,21 @@ th {
     display: none; }
   .btn > .caret, .comment-reply-link > .caret, .comment-respond #submit > .caret, #wp-calendar #prev a > .caret, #wp-calendar #next a > .caret, #wp-calendar td a > .caret, #searchform #searchsubmit > .caret,
   .dropup > .btn > .caret,
-  .dropup > .comment-reply-link > .caret, .comment-respond
-  .dropup > #submit > .caret, #wp-calendar #prev
-  .dropup > a > .caret, #wp-calendar #next
-  .dropup > a > .caret, #wp-calendar td
-  .dropup > a > .caret, #searchform
-  .dropup > #searchsubmit > .caret {
+  .dropup > .comment-reply-link > .caret,
+  .comment-respond .dropup > #submit > .caret,
+  #wp-calendar #prev .dropup > a > .caret,
+  #wp-calendar #next .dropup > a > .caret,
+  #wp-calendar td .dropup > a > .caret,
+  #searchform .dropup > #searchsubmit > .caret {
     border-top-color: #000 !important; }
   .label {
     border: 1px solid #000; }
   .table, #wp-calendar, table {
     border-collapse: collapse !important; }
     .table td, #wp-calendar td, table td,
-    .table th, #wp-calendar th, table th {
+    .table th,
+    #wp-calendar th,
+    table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
@@ -1058,14 +1060,14 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #fff; }
+  background-color: #fafafa; }
 
 input,
 button,
@@ -1079,7 +1081,7 @@ a {
   color: #337ab7;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #23527c;
+    color: #22527b;
     text-decoration: underline; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -1102,7 +1104,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #fff;
+  background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1269,7 +1271,7 @@ mark,
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #286090; }
+  color: #285f8f; }
 
 .text-success {
   color: #3c763d; }
@@ -1307,7 +1309,7 @@ a.text-danger:focus {
 
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #286090; }
+  background-color: #285f8f; }
 
 .bg-success {
   background-color: #dff0d8; }
@@ -2041,11 +2043,21 @@ th {
   max-width: 100%;
   margin-bottom: 20px; }
   .table > thead > tr > th, #wp-calendar > thead > tr > th, table > thead > tr > th,
-  .table > thead > tr > td, #wp-calendar > thead > tr > td, table > thead > tr > td,
-  .table > tbody > tr > th, #wp-calendar > tbody > tr > th, table > tbody > tr > th,
-  .table > tbody > tr > td, #wp-calendar > tbody > tr > td, table > tbody > tr > td,
-  .table > tfoot > tr > th, #wp-calendar > tfoot > tr > th, table > tfoot > tr > th,
-  .table > tfoot > tr > td, #wp-calendar > tfoot > tr > td, table > tfoot > tr > td {
+  .table > thead > tr > td,
+  #wp-calendar > thead > tr > td,
+  table > thead > tr > td,
+  .table > tbody > tr > th,
+  #wp-calendar > tbody > tr > th,
+  table > tbody > tr > th,
+  .table > tbody > tr > td,
+  #wp-calendar > tbody > tr > td,
+  table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  #wp-calendar > tfoot > tr > th,
+  table > tfoot > tr > th,
+  .table > tfoot > tr > td,
+  #wp-calendar > tfoot > tr > td,
+  table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857;
     vertical-align: top;
@@ -2054,16 +2066,26 @@ th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd; }
   .table > caption + thead > tr:first-child > th, #wp-calendar > caption + thead > tr:first-child > th, table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td, #wp-calendar > caption + thead > tr:first-child > td, table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th, #wp-calendar > colgroup + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td, #wp-calendar > colgroup + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th, #wp-calendar > thead:first-child > tr:first-child > th, table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td, #wp-calendar > thead:first-child > tr:first-child > td, table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > td,
+  #wp-calendar > caption + thead > tr:first-child > td,
+  table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th,
+  #wp-calendar > colgroup + thead > tr:first-child > th,
+  table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td,
+  #wp-calendar > colgroup + thead > tr:first-child > td,
+  table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th,
+  #wp-calendar > thead:first-child > tr:first-child > th,
+  table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td,
+  #wp-calendar > thead:first-child > tr:first-child > td,
+  table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody, #wp-calendar > tbody + tbody, table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table, #wp-calendar .table, table .table, .table #wp-calendar, #wp-calendar #wp-calendar, table #wp-calendar, .table table, #wp-calendar table, table table {
-    background-color: #fff; }
+    background-color: #fafafa; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -2104,17 +2126,39 @@ table th[class*="col-"] {
   display: table-cell; }
 
 .table > thead > tr > td.active, #wp-calendar > thead > tr > td.active, table > thead > tr > td.active,
-.table > thead > tr > th.active, #wp-calendar > thead > tr > th.active, table > thead > tr > th.active,
-.table > thead > tr.active > td, #wp-calendar > thead > tr.active > td, table > thead > tr.active > td,
-.table > thead > tr.active > th, #wp-calendar > thead > tr.active > th, table > thead > tr.active > th,
-.table > tbody > tr > td.active, #wp-calendar > tbody > tr > td.active, table > tbody > tr > td.active,
-.table > tbody > tr > th.active, #wp-calendar > tbody > tr > th.active, table > tbody > tr > th.active,
-.table > tbody > tr.active > td, #wp-calendar > tbody > tr.active > td, table > tbody > tr.active > td,
-.table > tbody > tr.active > th, #wp-calendar > tbody > tr.active > th, table > tbody > tr.active > th,
-.table > tfoot > tr > td.active, #wp-calendar > tfoot > tr > td.active, table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active, #wp-calendar > tfoot > tr > th.active, table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td, #wp-calendar > tfoot > tr.active > td, table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th, #wp-calendar > tfoot > tr.active > th, table > tfoot > tr.active > th {
+.table > thead > tr > th.active,
+#wp-calendar > thead > tr > th.active,
+table > thead > tr > th.active,
+.table > thead > tr.active > td,
+#wp-calendar > thead > tr.active > td,
+table > thead > tr.active > td,
+.table > thead > tr.active > th,
+#wp-calendar > thead > tr.active > th,
+table > thead > tr.active > th,
+.table > tbody > tr > td.active,
+#wp-calendar > tbody > tr > td.active,
+table > tbody > tr > td.active,
+.table > tbody > tr > th.active,
+#wp-calendar > tbody > tr > th.active,
+table > tbody > tr > th.active,
+.table > tbody > tr.active > td,
+#wp-calendar > tbody > tr.active > td,
+table > tbody > tr.active > td,
+.table > tbody > tr.active > th,
+#wp-calendar > tbody > tr.active > th,
+table > tbody > tr.active > th,
+.table > tfoot > tr > td.active,
+#wp-calendar > tfoot > tr > td.active,
+table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active,
+#wp-calendar > tfoot > tr > th.active,
+table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td,
+#wp-calendar > tfoot > tr.active > td,
+table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th,
+#wp-calendar > tfoot > tr.active > th,
+table > tfoot > tr.active > th {
   background-color: #f5f5f5; }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -2125,17 +2169,39 @@ table th[class*="col-"] {
   background-color: #e8e8e8; }
 
 .table > thead > tr > td.success, #wp-calendar > thead > tr > td.success, table > thead > tr > td.success,
-.table > thead > tr > th.success, #wp-calendar > thead > tr > th.success, table > thead > tr > th.success,
-.table > thead > tr.success > td, #wp-calendar > thead > tr.success > td, table > thead > tr.success > td,
-.table > thead > tr.success > th, #wp-calendar > thead > tr.success > th, table > thead > tr.success > th,
-.table > tbody > tr > td.success, #wp-calendar > tbody > tr > td.success, table > tbody > tr > td.success,
-.table > tbody > tr > th.success, #wp-calendar > tbody > tr > th.success, table > tbody > tr > th.success,
-.table > tbody > tr.success > td, #wp-calendar > tbody > tr.success > td, table > tbody > tr.success > td,
-.table > tbody > tr.success > th, #wp-calendar > tbody > tr.success > th, table > tbody > tr.success > th,
-.table > tfoot > tr > td.success, #wp-calendar > tfoot > tr > td.success, table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success, #wp-calendar > tfoot > tr > th.success, table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td, #wp-calendar > tfoot > tr.success > td, table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th, #wp-calendar > tfoot > tr.success > th, table > tfoot > tr.success > th {
+.table > thead > tr > th.success,
+#wp-calendar > thead > tr > th.success,
+table > thead > tr > th.success,
+.table > thead > tr.success > td,
+#wp-calendar > thead > tr.success > td,
+table > thead > tr.success > td,
+.table > thead > tr.success > th,
+#wp-calendar > thead > tr.success > th,
+table > thead > tr.success > th,
+.table > tbody > tr > td.success,
+#wp-calendar > tbody > tr > td.success,
+table > tbody > tr > td.success,
+.table > tbody > tr > th.success,
+#wp-calendar > tbody > tr > th.success,
+table > tbody > tr > th.success,
+.table > tbody > tr.success > td,
+#wp-calendar > tbody > tr.success > td,
+table > tbody > tr.success > td,
+.table > tbody > tr.success > th,
+#wp-calendar > tbody > tr.success > th,
+table > tbody > tr.success > th,
+.table > tfoot > tr > td.success,
+#wp-calendar > tfoot > tr > td.success,
+table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success,
+#wp-calendar > tfoot > tr > th.success,
+table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td,
+#wp-calendar > tfoot > tr.success > td,
+table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th,
+#wp-calendar > tfoot > tr.success > th,
+table > tfoot > tr.success > th {
   background-color: #dff0d8; }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -2146,17 +2212,39 @@ table th[class*="col-"] {
   background-color: #d0e9c6; }
 
 .table > thead > tr > td.info, #wp-calendar > thead > tr > td.info, table > thead > tr > td.info,
-.table > thead > tr > th.info, #wp-calendar > thead > tr > th.info, table > thead > tr > th.info,
-.table > thead > tr.info > td, #wp-calendar > thead > tr.info > td, table > thead > tr.info > td,
-.table > thead > tr.info > th, #wp-calendar > thead > tr.info > th, table > thead > tr.info > th,
-.table > tbody > tr > td.info, #wp-calendar > tbody > tr > td.info, table > tbody > tr > td.info,
-.table > tbody > tr > th.info, #wp-calendar > tbody > tr > th.info, table > tbody > tr > th.info,
-.table > tbody > tr.info > td, #wp-calendar > tbody > tr.info > td, table > tbody > tr.info > td,
-.table > tbody > tr.info > th, #wp-calendar > tbody > tr.info > th, table > tbody > tr.info > th,
-.table > tfoot > tr > td.info, #wp-calendar > tfoot > tr > td.info, table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info, #wp-calendar > tfoot > tr > th.info, table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td, #wp-calendar > tfoot > tr.info > td, table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th, #wp-calendar > tfoot > tr.info > th, table > tfoot > tr.info > th {
+.table > thead > tr > th.info,
+#wp-calendar > thead > tr > th.info,
+table > thead > tr > th.info,
+.table > thead > tr.info > td,
+#wp-calendar > thead > tr.info > td,
+table > thead > tr.info > td,
+.table > thead > tr.info > th,
+#wp-calendar > thead > tr.info > th,
+table > thead > tr.info > th,
+.table > tbody > tr > td.info,
+#wp-calendar > tbody > tr > td.info,
+table > tbody > tr > td.info,
+.table > tbody > tr > th.info,
+#wp-calendar > tbody > tr > th.info,
+table > tbody > tr > th.info,
+.table > tbody > tr.info > td,
+#wp-calendar > tbody > tr.info > td,
+table > tbody > tr.info > td,
+.table > tbody > tr.info > th,
+#wp-calendar > tbody > tr.info > th,
+table > tbody > tr.info > th,
+.table > tfoot > tr > td.info,
+#wp-calendar > tfoot > tr > td.info,
+table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info,
+#wp-calendar > tfoot > tr > th.info,
+table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td,
+#wp-calendar > tfoot > tr.info > td,
+table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th,
+#wp-calendar > tfoot > tr.info > th,
+table > tfoot > tr.info > th {
   background-color: #d9edf7; }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -2167,17 +2255,39 @@ table th[class*="col-"] {
   background-color: #c4e3f3; }
 
 .table > thead > tr > td.warning, #wp-calendar > thead > tr > td.warning, table > thead > tr > td.warning,
-.table > thead > tr > th.warning, #wp-calendar > thead > tr > th.warning, table > thead > tr > th.warning,
-.table > thead > tr.warning > td, #wp-calendar > thead > tr.warning > td, table > thead > tr.warning > td,
-.table > thead > tr.warning > th, #wp-calendar > thead > tr.warning > th, table > thead > tr.warning > th,
-.table > tbody > tr > td.warning, #wp-calendar > tbody > tr > td.warning, table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning, #wp-calendar > tbody > tr > th.warning, table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td, #wp-calendar > tbody > tr.warning > td, table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th, #wp-calendar > tbody > tr.warning > th, table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning, #wp-calendar > tfoot > tr > td.warning, table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning, #wp-calendar > tfoot > tr > th.warning, table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td, #wp-calendar > tfoot > tr.warning > td, table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th, #wp-calendar > tfoot > tr.warning > th, table > tfoot > tr.warning > th {
+.table > thead > tr > th.warning,
+#wp-calendar > thead > tr > th.warning,
+table > thead > tr > th.warning,
+.table > thead > tr.warning > td,
+#wp-calendar > thead > tr.warning > td,
+table > thead > tr.warning > td,
+.table > thead > tr.warning > th,
+#wp-calendar > thead > tr.warning > th,
+table > thead > tr.warning > th,
+.table > tbody > tr > td.warning,
+#wp-calendar > tbody > tr > td.warning,
+table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning,
+#wp-calendar > tbody > tr > th.warning,
+table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td,
+#wp-calendar > tbody > tr.warning > td,
+table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th,
+#wp-calendar > tbody > tr.warning > th,
+table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning,
+#wp-calendar > tfoot > tr > td.warning,
+table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning,
+#wp-calendar > tfoot > tr > th.warning,
+table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td,
+#wp-calendar > tfoot > tr.warning > td,
+table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th,
+#wp-calendar > tfoot > tr.warning > th,
+table > tfoot > tr.warning > th {
   background-color: #fcf8e3; }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -2188,17 +2298,39 @@ table th[class*="col-"] {
   background-color: #faf2cc; }
 
 .table > thead > tr > td.danger, #wp-calendar > thead > tr > td.danger, table > thead > tr > td.danger,
-.table > thead > tr > th.danger, #wp-calendar > thead > tr > th.danger, table > thead > tr > th.danger,
-.table > thead > tr.danger > td, #wp-calendar > thead > tr.danger > td, table > thead > tr.danger > td,
-.table > thead > tr.danger > th, #wp-calendar > thead > tr.danger > th, table > thead > tr.danger > th,
-.table > tbody > tr > td.danger, #wp-calendar > tbody > tr > td.danger, table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger, #wp-calendar > tbody > tr > th.danger, table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td, #wp-calendar > tbody > tr.danger > td, table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th, #wp-calendar > tbody > tr.danger > th, table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger, #wp-calendar > tfoot > tr > td.danger, table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger, #wp-calendar > tfoot > tr > th.danger, table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td, #wp-calendar > tfoot > tr.danger > td, table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th, #wp-calendar > tfoot > tr.danger > th, table > tfoot > tr.danger > th {
+.table > thead > tr > th.danger,
+#wp-calendar > thead > tr > th.danger,
+table > thead > tr > th.danger,
+.table > thead > tr.danger > td,
+#wp-calendar > thead > tr.danger > td,
+table > thead > tr.danger > td,
+.table > thead > tr.danger > th,
+#wp-calendar > thead > tr.danger > th,
+table > thead > tr.danger > th,
+.table > tbody > tr > td.danger,
+#wp-calendar > tbody > tr > td.danger,
+table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger,
+#wp-calendar > tbody > tr > th.danger,
+table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td,
+#wp-calendar > tbody > tr.danger > td,
+table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th,
+#wp-calendar > tbody > tr.danger > th,
+table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger,
+#wp-calendar > tfoot > tr > td.danger,
+table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger,
+#wp-calendar > tfoot > tr > th.danger,
+table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td,
+#wp-calendar > tfoot > tr.danger > td,
+table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th,
+#wp-calendar > tfoot > tr.danger > th,
+table > tfoot > tr.danger > th {
   background-color: #f2dede; }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -2349,16 +2481,16 @@ output {
   .form-control::-ms-expand, #searchform #s::-ms-expand {
     border: 0;
     background-color: transparent; }
-  .form-control[disabled], #searchform [disabled]#s, .form-control[readonly], #searchform [readonly]#s,
+  .form-control[disabled], #searchform #s[disabled], .form-control[readonly], #searchform #s[readonly],
   fieldset[disabled] .form-control,
-  fieldset[disabled] #searchform #s, #searchform
-  fieldset[disabled] #s {
+  fieldset[disabled] #searchform #s,
+  #searchform fieldset[disabled] #s {
     background-color: #eeeeee;
     opacity: 1; }
-  .form-control[disabled], #searchform [disabled]#s,
+  .form-control[disabled], #searchform #s[disabled],
   fieldset[disabled] .form-control,
-  fieldset[disabled] #searchform #s, #searchform
-  fieldset[disabled] #s {
+  fieldset[disabled] #searchform #s,
+  #searchform fieldset[disabled] #s {
     cursor: not-allowed; }
 
 textarea.form-control, #searchform textarea#s {
@@ -2368,99 +2500,81 @@ input[type="search"] {
   -webkit-appearance: none; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"].form-control, #searchform input[type="date"]#s,
+  input[type="date"].form-control, #searchform input#s[type="date"],
   input[type="time"].form-control,
-  #searchform input[type="time"]#s,
+  #searchform input#s[type="time"],
   input[type="datetime-local"].form-control,
-  #searchform input[type="datetime-local"]#s,
+  #searchform input#s[type="datetime-local"],
   input[type="month"].form-control,
-  #searchform input[type="month"]#s {
+  #searchform input#s[type="month"] {
     line-height: 34px; }
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, #searchform .input-group-sm > input[type="date"]#s,
-  .input-group-sm > input[type="date"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="date"].btn,
-  .input-group-sm > .input-group-btn > input[type="date"].comment-reply-link, .comment-respond
-  .input-group-sm > .input-group-btn > input[type="date"]#submit, #searchform
-  .input-group-sm > .input-group-btn > input[type="date"]#searchsubmit,
+  input[type="date"].input-sm, .input-group-sm > input.form-control[type="date"], #searchform .input-group-sm > input#s[type="date"],
+  .input-group-sm > input.input-group-addon[type="date"],
+  .input-group-sm > .input-group-btn > input.btn[type="date"], .input-group-sm > .input-group-btn > input.comment-reply-link[type="date"], .comment-respond .input-group-sm > .input-group-btn > input#submit[type="date"], #searchform .input-group-sm > .input-group-btn > input#searchsubmit[type="date"],
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
-  .input-group-sm > input[type="time"].form-control,
-  #searchform .input-group-sm > input[type="time"]#s,
-  .input-group-sm > input[type="time"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="time"].btn,
-  .input-group-sm > .input-group-btn > input[type="time"].comment-reply-link,
-  .comment-respond
-  .input-group-sm > .input-group-btn > input[type="time"]#submit,
-  #searchform
-  .input-group-sm > .input-group-btn > input[type="time"]#searchsubmit,
+  .input-group-sm > input.form-control[type="time"],
+  #searchform .input-group-sm > input#s[type="time"],
+  .input-group-sm > input.input-group-addon[type="time"],
+  .input-group-sm > .input-group-btn > input.btn[type="time"],
+  .input-group-sm > .input-group-btn > input.comment-reply-link[type="time"],
+  .comment-respond .input-group-sm > .input-group-btn > input#submit[type="time"],
+  #searchform .input-group-sm > .input-group-btn > input#searchsubmit[type="time"],
   .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
-  .input-group-sm > input[type="datetime-local"].form-control,
-  #searchform .input-group-sm > input[type="datetime-local"]#s,
-  .input-group-sm > input[type="datetime-local"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].comment-reply-link,
-  .comment-respond
-  .input-group-sm > .input-group-btn > input[type="datetime-local"]#submit,
-  #searchform
-  .input-group-sm > .input-group-btn > input[type="datetime-local"]#searchsubmit,
+  .input-group-sm > input.form-control[type="datetime-local"],
+  #searchform .input-group-sm > input#s[type="datetime-local"],
+  .input-group-sm > input.input-group-addon[type="datetime-local"],
+  .input-group-sm > .input-group-btn > input.btn[type="datetime-local"],
+  .input-group-sm > .input-group-btn > input.comment-reply-link[type="datetime-local"],
+  .comment-respond .input-group-sm > .input-group-btn > input#submit[type="datetime-local"],
+  #searchform .input-group-sm > .input-group-btn > input#searchsubmit[type="datetime-local"],
   .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
-  .input-group-sm > input[type="month"].form-control,
-  #searchform .input-group-sm > input[type="month"]#s,
-  .input-group-sm > input[type="month"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="month"].btn,
-  .input-group-sm > .input-group-btn > input[type="month"].comment-reply-link,
-  .comment-respond
-  .input-group-sm > .input-group-btn > input[type="month"]#submit,
-  #searchform
-  .input-group-sm > .input-group-btn > input[type="month"]#searchsubmit,
+  .input-group-sm > input.form-control[type="month"],
+  #searchform .input-group-sm > input#s[type="month"],
+  .input-group-sm > input.input-group-addon[type="month"],
+  .input-group-sm > .input-group-btn > input.btn[type="month"],
+  .input-group-sm > .input-group-btn > input.comment-reply-link[type="month"],
+  .comment-respond .input-group-sm > .input-group-btn > input#submit[type="month"],
+  #searchform .input-group-sm > .input-group-btn > input#searchsubmit[type="month"],
   .input-group-sm
   input[type="month"] {
     line-height: 30px; }
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, #searchform .input-group-lg > input[type="date"]#s,
-  .input-group-lg > input[type="date"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="date"].btn,
-  .input-group-lg > .input-group-btn > input[type="date"].comment-reply-link, .comment-respond
-  .input-group-lg > .input-group-btn > input[type="date"]#submit, #searchform
-  .input-group-lg > .input-group-btn > input[type="date"]#searchsubmit,
+  input[type="date"].input-lg, .input-group-lg > input.form-control[type="date"], #searchform .input-group-lg > input#s[type="date"],
+  .input-group-lg > input.input-group-addon[type="date"],
+  .input-group-lg > .input-group-btn > input.btn[type="date"], .input-group-lg > .input-group-btn > input.comment-reply-link[type="date"], .comment-respond .input-group-lg > .input-group-btn > input#submit[type="date"], #searchform .input-group-lg > .input-group-btn > input#searchsubmit[type="date"],
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
-  .input-group-lg > input[type="time"].form-control,
-  #searchform .input-group-lg > input[type="time"]#s,
-  .input-group-lg > input[type="time"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="time"].btn,
-  .input-group-lg > .input-group-btn > input[type="time"].comment-reply-link,
-  .comment-respond
-  .input-group-lg > .input-group-btn > input[type="time"]#submit,
-  #searchform
-  .input-group-lg > .input-group-btn > input[type="time"]#searchsubmit,
+  .input-group-lg > input.form-control[type="time"],
+  #searchform .input-group-lg > input#s[type="time"],
+  .input-group-lg > input.input-group-addon[type="time"],
+  .input-group-lg > .input-group-btn > input.btn[type="time"],
+  .input-group-lg > .input-group-btn > input.comment-reply-link[type="time"],
+  .comment-respond .input-group-lg > .input-group-btn > input#submit[type="time"],
+  #searchform .input-group-lg > .input-group-btn > input#searchsubmit[type="time"],
   .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
-  .input-group-lg > input[type="datetime-local"].form-control,
-  #searchform .input-group-lg > input[type="datetime-local"]#s,
-  .input-group-lg > input[type="datetime-local"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].comment-reply-link,
-  .comment-respond
-  .input-group-lg > .input-group-btn > input[type="datetime-local"]#submit,
-  #searchform
-  .input-group-lg > .input-group-btn > input[type="datetime-local"]#searchsubmit,
+  .input-group-lg > input.form-control[type="datetime-local"],
+  #searchform .input-group-lg > input#s[type="datetime-local"],
+  .input-group-lg > input.input-group-addon[type="datetime-local"],
+  .input-group-lg > .input-group-btn > input.btn[type="datetime-local"],
+  .input-group-lg > .input-group-btn > input.comment-reply-link[type="datetime-local"],
+  .comment-respond .input-group-lg > .input-group-btn > input#submit[type="datetime-local"],
+  #searchform .input-group-lg > .input-group-btn > input#searchsubmit[type="datetime-local"],
   .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
-  .input-group-lg > input[type="month"].form-control,
-  #searchform .input-group-lg > input[type="month"]#s,
-  .input-group-lg > input[type="month"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="month"].btn,
-  .input-group-lg > .input-group-btn > input[type="month"].comment-reply-link,
-  .comment-respond
-  .input-group-lg > .input-group-btn > input[type="month"]#submit,
-  #searchform
-  .input-group-lg > .input-group-btn > input[type="month"]#searchsubmit,
+  .input-group-lg > input.form-control[type="month"],
+  #searchform .input-group-lg > input#s[type="month"],
+  .input-group-lg > input.input-group-addon[type="month"],
+  .input-group-lg > .input-group-btn > input.btn[type="month"],
+  .input-group-lg > .input-group-btn > input.comment-reply-link[type="month"],
+  .comment-respond .input-group-lg > .input-group-btn > input#submit[type="month"],
+  #searchform .input-group-lg > .input-group-btn > input#searchsubmit[type="month"],
   .input-group-lg
   input[type="month"] {
     line-height: 46px; } }
@@ -2538,33 +2652,15 @@ fieldset[disabled]
   min-height: 34px; }
   .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, #searchform .input-group-lg > .form-control-static#s,
   .input-group-lg > .form-control-static.input-group-addon,
-  .input-group-lg > .input-group-btn > .form-control-static.btn,
-  .input-group-lg > .input-group-btn > .form-control-static.comment-reply-link, .comment-respond
-  .input-group-lg > .input-group-btn > .form-control-static#submit, #wp-calendar #prev
-  .input-group-lg > .input-group-btn > a.form-control-static, #wp-calendar #next
-  .input-group-lg > .input-group-btn > a.form-control-static, #wp-calendar td
-  .input-group-lg > .input-group-btn > a.form-control-static, #searchform
-  .input-group-lg > .input-group-btn > .form-control-static#searchsubmit, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, #searchform .input-group-sm > .form-control-static#s,
+  .input-group-lg > .input-group-btn > .form-control-static.btn, .input-group-lg > .input-group-btn > .form-control-static.comment-reply-link, .comment-respond .input-group-lg > .input-group-btn > .form-control-static#submit, #wp-calendar #prev .input-group-lg > .input-group-btn > a.form-control-static, #wp-calendar #next .input-group-lg > .input-group-btn > a.form-control-static, #wp-calendar td .input-group-lg > .input-group-btn > a.form-control-static, #searchform .input-group-lg > .input-group-btn > .form-control-static#searchsubmit, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, #searchform .input-group-sm > .form-control-static#s,
   .input-group-sm > .form-control-static.input-group-addon,
-  .input-group-sm > .input-group-btn > .form-control-static.btn,
-  .input-group-sm > .input-group-btn > .form-control-static.comment-reply-link, .comment-respond
-  .input-group-sm > .input-group-btn > .form-control-static#submit, #wp-calendar #prev
-  .input-group-sm > .input-group-btn > a.form-control-static, #wp-calendar #next
-  .input-group-sm > .input-group-btn > a.form-control-static, #wp-calendar td
-  .input-group-sm > .input-group-btn > a.form-control-static, #searchform
-  .input-group-sm > .input-group-btn > .form-control-static#searchsubmit {
+  .input-group-sm > .input-group-btn > .form-control-static.btn, .input-group-sm > .input-group-btn > .form-control-static.comment-reply-link, .comment-respond .input-group-sm > .input-group-btn > .form-control-static#submit, #wp-calendar #prev .input-group-sm > .input-group-btn > a.form-control-static, #wp-calendar #next .input-group-sm > .input-group-btn > a.form-control-static, #wp-calendar td .input-group-sm > .input-group-btn > a.form-control-static, #searchform .input-group-sm > .input-group-btn > .form-control-static#searchsubmit {
     padding-left: 0;
     padding-right: 0; }
 
 .input-sm, .input-group-sm > .form-control, #searchform .input-group-sm > #s,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn,
-.input-group-sm > .input-group-btn > .comment-reply-link, .comment-respond
-.input-group-sm > .input-group-btn > #submit, #wp-calendar #prev
-.input-group-sm > .input-group-btn > a, #wp-calendar #next
-.input-group-sm > .input-group-btn > a, #wp-calendar td
-.input-group-sm > .input-group-btn > a, #searchform
-.input-group-sm > .input-group-btn > #searchsubmit {
+.input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > .comment-reply-link, .comment-respond .input-group-sm > .input-group-btn > #submit, #wp-calendar #prev .input-group-sm > .input-group-btn > a, #wp-calendar #next .input-group-sm > .input-group-btn > a, #wp-calendar td .input-group-sm > .input-group-btn > a, #searchform .input-group-sm > .input-group-btn > #searchsubmit {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2573,29 +2669,21 @@ fieldset[disabled]
 
 select.input-sm, .input-group-sm > select.form-control, #searchform .input-group-sm > select#s,
 .input-group-sm > select.input-group-addon,
-.input-group-sm > .input-group-btn > select.btn,
-.input-group-sm > .input-group-btn > select.comment-reply-link, .comment-respond
-.input-group-sm > .input-group-btn > select#submit, #searchform
-.input-group-sm > .input-group-btn > select#searchsubmit {
+.input-group-sm > .input-group-btn > select.btn, .input-group-sm > .input-group-btn > select.comment-reply-link, .comment-respond .input-group-sm > .input-group-btn > select#submit, #searchform .input-group-sm > .input-group-btn > select#searchsubmit {
   height: 30px;
   line-height: 30px; }
 
 textarea.input-sm, .input-group-sm > textarea.form-control, #searchform .input-group-sm > textarea#s,
 .input-group-sm > textarea.input-group-addon,
-.input-group-sm > .input-group-btn > textarea.btn,
-.input-group-sm > .input-group-btn > textarea.comment-reply-link, .comment-respond
-.input-group-sm > .input-group-btn > textarea#submit, #searchform
-.input-group-sm > .input-group-btn > textarea#searchsubmit,
+.input-group-sm > .input-group-btn > textarea.btn, .input-group-sm > .input-group-btn > textarea.comment-reply-link, .comment-respond .input-group-sm > .input-group-btn > textarea#submit, #searchform .input-group-sm > .input-group-btn > textarea#searchsubmit,
 select[multiple].input-sm,
-.input-group-sm > select[multiple].form-control,
-#searchform .input-group-sm > select[multiple]#s,
-.input-group-sm > select[multiple].input-group-addon,
-.input-group-sm > .input-group-btn > select[multiple].btn,
-.input-group-sm > .input-group-btn > select[multiple].comment-reply-link,
-.comment-respond
-.input-group-sm > .input-group-btn > select[multiple]#submit,
-#searchform
-.input-group-sm > .input-group-btn > select[multiple]#searchsubmit {
+.input-group-sm > select.form-control[multiple],
+#searchform .input-group-sm > select#s[multiple],
+.input-group-sm > select.input-group-addon[multiple],
+.input-group-sm > .input-group-btn > select.btn[multiple],
+.input-group-sm > .input-group-btn > select.comment-reply-link[multiple],
+.comment-respond .input-group-sm > .input-group-btn > select#submit[multiple],
+#searchform .input-group-sm > .input-group-btn > select#searchsubmit[multiple] {
   height: auto; }
 
 .form-group-sm .form-control, .form-group-sm #searchform #s, #searchform .form-group-sm #s {
@@ -2611,8 +2699,8 @@ select[multiple].input-sm,
 
 .form-group-sm textarea.form-control, .form-group-sm #searchform textarea#s, #searchform .form-group-sm textarea#s,
 .form-group-sm select[multiple].form-control,
-.form-group-sm #searchform select[multiple]#s, #searchform
-.form-group-sm select[multiple]#s {
+.form-group-sm #searchform select#s[multiple],
+#searchform .form-group-sm select#s[multiple] {
   height: auto; }
 
 .form-group-sm .form-control-static {
@@ -2624,13 +2712,7 @@ select[multiple].input-sm,
 
 .input-lg, .input-group-lg > .form-control, #searchform .input-group-lg > #s,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
-.input-group-lg > .input-group-btn > .comment-reply-link, .comment-respond
-.input-group-lg > .input-group-btn > #submit, #wp-calendar #prev
-.input-group-lg > .input-group-btn > a, #wp-calendar #next
-.input-group-lg > .input-group-btn > a, #wp-calendar td
-.input-group-lg > .input-group-btn > a, #searchform
-.input-group-lg > .input-group-btn > #searchsubmit {
+.input-group-lg > .input-group-btn > .btn, .input-group-lg > .input-group-btn > .comment-reply-link, .comment-respond .input-group-lg > .input-group-btn > #submit, #wp-calendar #prev .input-group-lg > .input-group-btn > a, #wp-calendar #next .input-group-lg > .input-group-btn > a, #wp-calendar td .input-group-lg > .input-group-btn > a, #searchform .input-group-lg > .input-group-btn > #searchsubmit {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -2639,29 +2721,21 @@ select[multiple].input-sm,
 
 select.input-lg, .input-group-lg > select.form-control, #searchform .input-group-lg > select#s,
 .input-group-lg > select.input-group-addon,
-.input-group-lg > .input-group-btn > select.btn,
-.input-group-lg > .input-group-btn > select.comment-reply-link, .comment-respond
-.input-group-lg > .input-group-btn > select#submit, #searchform
-.input-group-lg > .input-group-btn > select#searchsubmit {
+.input-group-lg > .input-group-btn > select.btn, .input-group-lg > .input-group-btn > select.comment-reply-link, .comment-respond .input-group-lg > .input-group-btn > select#submit, #searchform .input-group-lg > .input-group-btn > select#searchsubmit {
   height: 46px;
   line-height: 46px; }
 
 textarea.input-lg, .input-group-lg > textarea.form-control, #searchform .input-group-lg > textarea#s,
 .input-group-lg > textarea.input-group-addon,
-.input-group-lg > .input-group-btn > textarea.btn,
-.input-group-lg > .input-group-btn > textarea.comment-reply-link, .comment-respond
-.input-group-lg > .input-group-btn > textarea#submit, #searchform
-.input-group-lg > .input-group-btn > textarea#searchsubmit,
+.input-group-lg > .input-group-btn > textarea.btn, .input-group-lg > .input-group-btn > textarea.comment-reply-link, .comment-respond .input-group-lg > .input-group-btn > textarea#submit, #searchform .input-group-lg > .input-group-btn > textarea#searchsubmit,
 select[multiple].input-lg,
-.input-group-lg > select[multiple].form-control,
-#searchform .input-group-lg > select[multiple]#s,
-.input-group-lg > select[multiple].input-group-addon,
-.input-group-lg > .input-group-btn > select[multiple].btn,
-.input-group-lg > .input-group-btn > select[multiple].comment-reply-link,
-.comment-respond
-.input-group-lg > .input-group-btn > select[multiple]#submit,
-#searchform
-.input-group-lg > .input-group-btn > select[multiple]#searchsubmit {
+.input-group-lg > select.form-control[multiple],
+#searchform .input-group-lg > select#s[multiple],
+.input-group-lg > select.input-group-addon[multiple],
+.input-group-lg > .input-group-btn > select.btn[multiple],
+.input-group-lg > .input-group-btn > select.comment-reply-link[multiple],
+.comment-respond .input-group-lg > .input-group-btn > select#submit[multiple],
+#searchform .input-group-lg > .input-group-btn > select#searchsubmit[multiple] {
   height: auto; }
 
 .form-group-lg .form-control, .form-group-lg #searchform #s, #searchform .form-group-lg #s {
@@ -2677,8 +2751,8 @@ select[multiple].input-lg,
 
 .form-group-lg textarea.form-control, .form-group-lg #searchform textarea#s, #searchform .form-group-lg textarea#s,
 .form-group-lg select[multiple].form-control,
-.form-group-lg #searchform select[multiple]#s, #searchform
-.form-group-lg select[multiple]#s {
+.form-group-lg #searchform select#s[multiple],
+#searchform .form-group-lg select#s[multiple] {
   height: auto; }
 
 .form-group-lg .form-control-static {
@@ -2705,36 +2779,20 @@ select[multiple].input-lg,
   text-align: center;
   pointer-events: none; }
 
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, #searchform .input-group-lg > #s + .form-control-feedback,
-.input-group-lg > .input-group-addon + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn + .form-control-feedback,
-.input-group-lg > .input-group-btn > .comment-reply-link + .form-control-feedback, .comment-respond
-.input-group-lg > .input-group-btn > #submit + .form-control-feedback, #wp-calendar #prev
-.input-group-lg > .input-group-btn > a + .form-control-feedback, #wp-calendar #next
-.input-group-lg > .input-group-btn > a + .form-control-feedback, #wp-calendar td
-.input-group-lg > .input-group-btn > a + .form-control-feedback, #searchform
-.input-group-lg > .input-group-btn > #searchsubmit + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, #searchform .input-group-lg > #s + .form-control-feedback, .input-group-lg > .input-group-addon + .form-control-feedback, .input-group-lg > .input-group-btn > .btn + .form-control-feedback, .input-group-lg > .input-group-btn > .comment-reply-link + .form-control-feedback, .comment-respond .input-group-lg > .input-group-btn > #submit + .form-control-feedback, #wp-calendar #prev .input-group-lg > .input-group-btn > a + .form-control-feedback, #wp-calendar #next .input-group-lg > .input-group-btn > a + .form-control-feedback, #wp-calendar td .input-group-lg > .input-group-btn > a + .form-control-feedback, #searchform .input-group-lg > .input-group-btn > #searchsubmit + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback,
-.form-group-lg #searchform #s + .form-control-feedback, #searchform
-.form-group-lg #s + .form-control-feedback {
+.form-group-lg #searchform #s + .form-control-feedback,
+#searchform .form-group-lg #s + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px; }
 
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, #searchform .input-group-sm > #s + .form-control-feedback,
-.input-group-sm > .input-group-addon + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn + .form-control-feedback,
-.input-group-sm > .input-group-btn > .comment-reply-link + .form-control-feedback, .comment-respond
-.input-group-sm > .input-group-btn > #submit + .form-control-feedback, #wp-calendar #prev
-.input-group-sm > .input-group-btn > a + .form-control-feedback, #wp-calendar #next
-.input-group-sm > .input-group-btn > a + .form-control-feedback, #wp-calendar td
-.input-group-sm > .input-group-btn > a + .form-control-feedback, #searchform
-.input-group-sm > .input-group-btn > #searchsubmit + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, #searchform .input-group-sm > #s + .form-control-feedback, .input-group-sm > .input-group-addon + .form-control-feedback, .input-group-sm > .input-group-btn > .btn + .form-control-feedback, .input-group-sm > .input-group-btn > .comment-reply-link + .form-control-feedback, .comment-respond .input-group-sm > .input-group-btn > #submit + .form-control-feedback, #wp-calendar #prev .input-group-sm > .input-group-btn > a + .form-control-feedback, #wp-calendar #next .input-group-sm > .input-group-btn > a + .form-control-feedback, #wp-calendar td .input-group-sm > .input-group-btn > a + .form-control-feedback, #searchform .input-group-sm > .input-group-btn > #searchsubmit + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback,
-.form-group-sm #searchform #s + .form-control-feedback, #searchform
-.form-group-sm #s + .form-control-feedback {
+.form-group-sm #searchform #s + .form-control-feedback,
+#searchform .form-group-sm #s + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px; }
@@ -2855,8 +2913,8 @@ select[multiple].input-lg,
     .form-inline .input-group .input-group-addon,
     .form-inline .input-group .input-group-btn,
     .form-inline .input-group .form-control,
-    .form-inline .input-group #searchform #s, #searchform
-    .form-inline .input-group #s {
+    .form-inline .input-group #searchform #s,
+    #searchform .form-inline .input-group #s {
       width: auto; }
   .form-inline .input-group > .form-control, .form-inline #searchform .input-group > #s, #searchform .form-inline .input-group > #s {
     width: 100%; }
@@ -2949,19 +3007,19 @@ select[multiple].input-lg,
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, .disabled.comment-reply-link, .comment-respond .disabled#submit, #wp-calendar #prev a.disabled, #wp-calendar #next a.disabled, #wp-calendar td a.disabled, #searchform .disabled#searchsubmit, .btn[disabled], [disabled].comment-reply-link, .comment-respond [disabled]#submit, #wp-calendar #prev a[disabled], #wp-calendar #next a[disabled], #wp-calendar td a[disabled], #searchform [disabled]#searchsubmit,
+  .btn.disabled, .disabled.comment-reply-link, .comment-respond .disabled#submit, #wp-calendar #prev a.disabled, #wp-calendar #next a.disabled, #wp-calendar td a.disabled, #searchform .disabled#searchsubmit, .btn[disabled], .comment-reply-link[disabled], .comment-respond #submit[disabled], #wp-calendar #prev a[disabled], #wp-calendar #next a[disabled], #wp-calendar td a[disabled], #searchform #searchsubmit[disabled],
   fieldset[disabled] .btn,
   fieldset[disabled] .comment-reply-link,
-  fieldset[disabled] .comment-respond #submit, .comment-respond
-  fieldset[disabled] #submit,
-  fieldset[disabled] #wp-calendar #prev a, #wp-calendar #prev
-  fieldset[disabled] a,
-  fieldset[disabled] #wp-calendar #next a, #wp-calendar #next
-  fieldset[disabled] a,
-  fieldset[disabled] #wp-calendar td a, #wp-calendar td
-  fieldset[disabled] a,
-  fieldset[disabled] #searchform #searchsubmit, #searchform
-  fieldset[disabled] #searchsubmit {
+  fieldset[disabled] .comment-respond #submit,
+  .comment-respond fieldset[disabled] #submit,
+  fieldset[disabled] #wp-calendar #prev a,
+  #wp-calendar #prev fieldset[disabled] a,
+  fieldset[disabled] #wp-calendar #next a,
+  #wp-calendar #next fieldset[disabled] a,
+  fieldset[disabled] #wp-calendar td a,
+  #wp-calendar td fieldset[disabled] a,
+  fieldset[disabled] #searchform #searchsubmit,
+  #searchform fieldset[disabled] #searchsubmit {
     cursor: not-allowed;
     opacity: 0.65;
     filter: alpha(opacity=65);
@@ -2971,16 +3029,16 @@ select[multiple].input-lg,
 a.btn.disabled, a.disabled.comment-reply-link, .comment-respond a.disabled#submit, #wp-calendar #prev a.disabled, #wp-calendar #next a.disabled, #wp-calendar td a.disabled, #searchform a.disabled#searchsubmit,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.comment-reply-link,
-fieldset[disabled] .comment-respond a#submit, .comment-respond
-fieldset[disabled] a#submit,
-fieldset[disabled] #wp-calendar #prev a, #wp-calendar #prev
-fieldset[disabled] a,
-fieldset[disabled] #wp-calendar #next a, #wp-calendar #next
-fieldset[disabled] a,
-fieldset[disabled] #wp-calendar td a, #wp-calendar td
-fieldset[disabled] a,
-fieldset[disabled] #searchform a#searchsubmit, #searchform
-fieldset[disabled] a#searchsubmit {
+fieldset[disabled] .comment-respond a#submit,
+.comment-respond fieldset[disabled] a#submit,
+fieldset[disabled] #wp-calendar #prev a,
+#wp-calendar #prev fieldset[disabled] a,
+fieldset[disabled] #wp-calendar #next a,
+#wp-calendar #next fieldset[disabled] a,
+fieldset[disabled] #wp-calendar td a,
+#wp-calendar td fieldset[disabled] a,
+fieldset[disabled] #searchform a#searchsubmit,
+#searchform fieldset[disabled] a#searchsubmit {
   pointer-events: none; }
 
 .btn-default {
@@ -3023,27 +3081,27 @@ fieldset[disabled] a#searchsubmit {
 .btn-primary {
   color: #fff;
   background-color: #337ab7;
-  border-color: #2e6da4; }
+  border-color: #337ab7; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #286090;
-    border-color: #122b40; }
+    background-color: #285f8f;
+    border-color: #173853; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74; }
+    background-color: #285f8f;
+    border-color: #265a87; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74; }
+    background-color: #285f8f;
+    border-color: #265a87; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
     .open > .btn-primary.dropdown-toggle:hover,
     .open > .btn-primary.dropdown-toggle:focus,
     .open > .btn-primary.dropdown-toggle.focus {
       color: #fff;
-      background-color: #204d74;
-      border-color: #122b40; }
+      background-color: #204d73;
+      border-color: #173853; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     background-image: none; }
@@ -3052,7 +3110,7 @@ fieldset[disabled] a#searchsubmit {
   fieldset[disabled] .btn-primary:focus,
   fieldset[disabled] .btn-primary.focus {
     background-color: #337ab7;
-    border-color: #2e6da4; }
+    border-color: #337ab7; }
   .btn-primary .badge {
     color: #337ab7;
     background-color: #fff; }
@@ -3089,7 +3147,7 @@ fieldset[disabled] a#searchsubmit {
   .open > .btn-success.dropdown-toggle,
   .open > .dropdown-toggle.comment-reply-link {
     background-image: none; }
-  .btn-success.disabled:hover, .disabled.comment-reply-link:hover, .btn-success.disabled:focus, .disabled.comment-reply-link:focus, .btn-success.disabled.focus, .disabled.focus.comment-reply-link, .btn-success[disabled]:hover, [disabled].comment-reply-link:hover, .btn-success[disabled]:focus, [disabled].comment-reply-link:focus, .btn-success[disabled].focus, [disabled].focus.comment-reply-link,
+  .btn-success.disabled:hover, .disabled.comment-reply-link:hover, .btn-success.disabled:focus, .disabled.comment-reply-link:focus, .btn-success.disabled.focus, .disabled.focus.comment-reply-link, .btn-success[disabled]:hover, .comment-reply-link[disabled]:hover, .btn-success[disabled]:focus, .comment-reply-link[disabled]:focus, .btn-success[disabled].focus, .comment-reply-link[disabled].focus,
   fieldset[disabled] .btn-success:hover,
   fieldset[disabled] .comment-reply-link:hover,
   fieldset[disabled] .btn-success:focus,
@@ -3115,57 +3173,57 @@ fieldset[disabled] a#searchsubmit {
     background-color: #31b0d5;
     border-color: #269abc; }
   .btn-info:active, .comment-respond #submit:active, #wp-calendar td a:active, #searchform #searchsubmit:active, .btn-info.active, .comment-respond .active#submit, #wp-calendar td a.active, #searchform .active#searchsubmit,
-  .open > .btn-info.dropdown-toggle, .comment-respond
-  .open > .dropdown-toggle#submit, #wp-calendar td
-  .open > a.dropdown-toggle, #searchform
-  .open > .dropdown-toggle#searchsubmit {
+  .open > .btn-info.dropdown-toggle,
+  .comment-respond .open > .dropdown-toggle#submit,
+  #wp-calendar td .open > a.dropdown-toggle,
+  #searchform .open > .dropdown-toggle#searchsubmit {
     color: #fff;
     background-color: #31b0d5;
     border-color: #269abc; }
     .btn-info:active:hover, .comment-respond #submit:active:hover, #wp-calendar td a:active:hover, #searchform #searchsubmit:active:hover, .btn-info:active:focus, .comment-respond #submit:active:focus, #wp-calendar td a:active:focus, #searchform #searchsubmit:active:focus, .btn-info:active.focus, .comment-respond #submit:active.focus, #wp-calendar td a:active.focus, #searchform #searchsubmit:active.focus, .btn-info.active:hover, .comment-respond .active#submit:hover, #wp-calendar td a.active:hover, #searchform .active#searchsubmit:hover, .btn-info.active:focus, .comment-respond .active#submit:focus, #wp-calendar td a.active:focus, #searchform .active#searchsubmit:focus, .btn-info.active.focus, .comment-respond .active.focus#submit, #wp-calendar td a.active.focus, #searchform .active.focus#searchsubmit,
-    .open > .btn-info.dropdown-toggle:hover, .comment-respond
-    .open > .dropdown-toggle#submit:hover, #wp-calendar td
-    .open > a.dropdown-toggle:hover, #searchform
-    .open > .dropdown-toggle#searchsubmit:hover,
-    .open > .btn-info.dropdown-toggle:focus, .comment-respond
-    .open > .dropdown-toggle#submit:focus, #wp-calendar td
-    .open > a.dropdown-toggle:focus, #searchform
-    .open > .dropdown-toggle#searchsubmit:focus,
-    .open > .btn-info.dropdown-toggle.focus, .comment-respond
-    .open > .dropdown-toggle.focus#submit, #wp-calendar td
-    .open > a.dropdown-toggle.focus, #searchform
-    .open > .dropdown-toggle.focus#searchsubmit {
+    .open > .btn-info.dropdown-toggle:hover,
+    .comment-respond .open > .dropdown-toggle#submit:hover,
+    #wp-calendar td .open > a.dropdown-toggle:hover,
+    #searchform .open > .dropdown-toggle#searchsubmit:hover,
+    .open > .btn-info.dropdown-toggle:focus,
+    .comment-respond .open > .dropdown-toggle#submit:focus,
+    #wp-calendar td .open > a.dropdown-toggle:focus,
+    #searchform .open > .dropdown-toggle#searchsubmit:focus,
+    .open > .btn-info.dropdown-toggle.focus,
+    .comment-respond .open > .dropdown-toggle.focus#submit,
+    #wp-calendar td .open > a.dropdown-toggle.focus,
+    #searchform .open > .dropdown-toggle.focus#searchsubmit {
       color: #fff;
       background-color: #269abc;
       border-color: #1b6d85; }
   .btn-info:active, .comment-respond #submit:active, #wp-calendar td a:active, #searchform #searchsubmit:active, .btn-info.active, .comment-respond .active#submit, #wp-calendar td a.active, #searchform .active#searchsubmit,
-  .open > .btn-info.dropdown-toggle, .comment-respond
-  .open > .dropdown-toggle#submit, #wp-calendar td
-  .open > a.dropdown-toggle, #searchform
-  .open > .dropdown-toggle#searchsubmit {
+  .open > .btn-info.dropdown-toggle,
+  .comment-respond .open > .dropdown-toggle#submit,
+  #wp-calendar td .open > a.dropdown-toggle,
+  #searchform .open > .dropdown-toggle#searchsubmit {
     background-image: none; }
-  .btn-info.disabled:hover, .comment-respond .disabled#submit:hover, #wp-calendar td a.disabled:hover, #searchform .disabled#searchsubmit:hover, .btn-info.disabled:focus, .comment-respond .disabled#submit:focus, #wp-calendar td a.disabled:focus, #searchform .disabled#searchsubmit:focus, .btn-info.disabled.focus, .comment-respond .disabled.focus#submit, #wp-calendar td a.disabled.focus, #searchform .disabled.focus#searchsubmit, .btn-info[disabled]:hover, .comment-respond [disabled]#submit:hover, #wp-calendar td a[disabled]:hover, #searchform [disabled]#searchsubmit:hover, .btn-info[disabled]:focus, .comment-respond [disabled]#submit:focus, #wp-calendar td a[disabled]:focus, #searchform [disabled]#searchsubmit:focus, .btn-info[disabled].focus, .comment-respond [disabled].focus#submit, #wp-calendar td a[disabled].focus, #searchform [disabled].focus#searchsubmit,
+  .btn-info.disabled:hover, .comment-respond .disabled#submit:hover, #wp-calendar td a.disabled:hover, #searchform .disabled#searchsubmit:hover, .btn-info.disabled:focus, .comment-respond .disabled#submit:focus, #wp-calendar td a.disabled:focus, #searchform .disabled#searchsubmit:focus, .btn-info.disabled.focus, .comment-respond .disabled.focus#submit, #wp-calendar td a.disabled.focus, #searchform .disabled.focus#searchsubmit, .btn-info[disabled]:hover, .comment-respond #submit[disabled]:hover, #wp-calendar td a[disabled]:hover, #searchform #searchsubmit[disabled]:hover, .btn-info[disabled]:focus, .comment-respond #submit[disabled]:focus, #wp-calendar td a[disabled]:focus, #searchform #searchsubmit[disabled]:focus, .btn-info[disabled].focus, .comment-respond #submit[disabled].focus, #wp-calendar td a[disabled].focus, #searchform #searchsubmit[disabled].focus,
   fieldset[disabled] .btn-info:hover,
-  fieldset[disabled] .comment-respond #submit:hover, .comment-respond
-  fieldset[disabled] #submit:hover,
-  fieldset[disabled] #wp-calendar td a:hover, #wp-calendar td
-  fieldset[disabled] a:hover,
-  fieldset[disabled] #searchform #searchsubmit:hover, #searchform
-  fieldset[disabled] #searchsubmit:hover,
+  fieldset[disabled] .comment-respond #submit:hover,
+  .comment-respond fieldset[disabled] #submit:hover,
+  fieldset[disabled] #wp-calendar td a:hover,
+  #wp-calendar td fieldset[disabled] a:hover,
+  fieldset[disabled] #searchform #searchsubmit:hover,
+  #searchform fieldset[disabled] #searchsubmit:hover,
   fieldset[disabled] .btn-info:focus,
-  fieldset[disabled] .comment-respond #submit:focus, .comment-respond
-  fieldset[disabled] #submit:focus,
-  fieldset[disabled] #wp-calendar td a:focus, #wp-calendar td
-  fieldset[disabled] a:focus,
-  fieldset[disabled] #searchform #searchsubmit:focus, #searchform
-  fieldset[disabled] #searchsubmit:focus,
+  fieldset[disabled] .comment-respond #submit:focus,
+  .comment-respond fieldset[disabled] #submit:focus,
+  fieldset[disabled] #wp-calendar td a:focus,
+  #wp-calendar td fieldset[disabled] a:focus,
+  fieldset[disabled] #searchform #searchsubmit:focus,
+  #searchform fieldset[disabled] #searchsubmit:focus,
   fieldset[disabled] .btn-info.focus,
-  fieldset[disabled] .comment-respond .focus#submit, .comment-respond
-  fieldset[disabled] .focus#submit,
-  fieldset[disabled] #wp-calendar td a.focus, #wp-calendar td
-  fieldset[disabled] a.focus,
-  fieldset[disabled] #searchform .focus#searchsubmit, #searchform
-  fieldset[disabled] .focus#searchsubmit {
+  fieldset[disabled] .comment-respond .focus#submit,
+  .comment-respond fieldset[disabled] .focus#submit,
+  fieldset[disabled] #wp-calendar td a.focus,
+  #wp-calendar td fieldset[disabled] a.focus,
+  fieldset[disabled] #searchform .focus#searchsubmit,
+  #searchform fieldset[disabled] .focus#searchsubmit {
     background-color: #5bc0de;
     border-color: #46b8da; }
   .btn-info .badge, .comment-respond #submit .badge, #wp-calendar td a .badge, #searchform #searchsubmit .badge {
@@ -3174,61 +3232,61 @@ fieldset[disabled] a#searchsubmit {
 
 .btn-warning, #wp-calendar #prev a, #wp-calendar #next a {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236; }
+  background-color: #ff8700;
+  border-color: #e67a00; }
   .btn-warning:focus, #wp-calendar #prev a:focus, #wp-calendar #next a:focus, .btn-warning.focus, #wp-calendar #prev a.focus, #wp-calendar #next a.focus {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #985f0d; }
+    background-color: #cc6c00;
+    border-color: #663600; }
   .btn-warning:hover, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512; }
+    background-color: #cc6c00;
+    border-color: #a85900; }
   .btn-warning:active, #wp-calendar #prev a:active, #wp-calendar #next a:active, .btn-warning.active, #wp-calendar #prev a.active, #wp-calendar #next a.active,
-  .open > .btn-warning.dropdown-toggle, #wp-calendar #prev
-  .open > a.dropdown-toggle, #wp-calendar #next
-  .open > a.dropdown-toggle {
+  .open > .btn-warning.dropdown-toggle,
+  #wp-calendar #prev .open > a.dropdown-toggle,
+  #wp-calendar #next .open > a.dropdown-toggle {
     color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512; }
+    background-color: #cc6c00;
+    border-color: #a85900; }
     .btn-warning:active:hover, #wp-calendar #prev a:active:hover, #wp-calendar #next a:active:hover, .btn-warning:active:focus, #wp-calendar #prev a:active:focus, #wp-calendar #next a:active:focus, .btn-warning:active.focus, #wp-calendar #prev a:active.focus, #wp-calendar #next a:active.focus, .btn-warning.active:hover, #wp-calendar #prev a.active:hover, #wp-calendar #next a.active:hover, .btn-warning.active:focus, #wp-calendar #prev a.active:focus, #wp-calendar #next a.active:focus, .btn-warning.active.focus, #wp-calendar #prev a.active.focus, #wp-calendar #next a.active.focus,
-    .open > .btn-warning.dropdown-toggle:hover, #wp-calendar #prev
-    .open > a.dropdown-toggle:hover, #wp-calendar #next
-    .open > a.dropdown-toggle:hover,
-    .open > .btn-warning.dropdown-toggle:focus, #wp-calendar #prev
-    .open > a.dropdown-toggle:focus, #wp-calendar #next
-    .open > a.dropdown-toggle:focus,
-    .open > .btn-warning.dropdown-toggle.focus, #wp-calendar #prev
-    .open > a.dropdown-toggle.focus, #wp-calendar #next
-    .open > a.dropdown-toggle.focus {
+    .open > .btn-warning.dropdown-toggle:hover,
+    #wp-calendar #prev .open > a.dropdown-toggle:hover,
+    #wp-calendar #next .open > a.dropdown-toggle:hover,
+    .open > .btn-warning.dropdown-toggle:focus,
+    #wp-calendar #prev .open > a.dropdown-toggle:focus,
+    #wp-calendar #next .open > a.dropdown-toggle:focus,
+    .open > .btn-warning.dropdown-toggle.focus,
+    #wp-calendar #prev .open > a.dropdown-toggle.focus,
+    #wp-calendar #next .open > a.dropdown-toggle.focus {
       color: #fff;
-      background-color: #d58512;
-      border-color: #985f0d; }
+      background-color: #a85900;
+      border-color: #663600; }
   .btn-warning:active, #wp-calendar #prev a:active, #wp-calendar #next a:active, .btn-warning.active, #wp-calendar #prev a.active, #wp-calendar #next a.active,
-  .open > .btn-warning.dropdown-toggle, #wp-calendar #prev
-  .open > a.dropdown-toggle, #wp-calendar #next
-  .open > a.dropdown-toggle {
+  .open > .btn-warning.dropdown-toggle,
+  #wp-calendar #prev .open > a.dropdown-toggle,
+  #wp-calendar #next .open > a.dropdown-toggle {
     background-image: none; }
   .btn-warning.disabled:hover, #wp-calendar #prev a.disabled:hover, #wp-calendar #next a.disabled:hover, .btn-warning.disabled:focus, #wp-calendar #prev a.disabled:focus, #wp-calendar #next a.disabled:focus, .btn-warning.disabled.focus, #wp-calendar #prev a.disabled.focus, #wp-calendar #next a.disabled.focus, .btn-warning[disabled]:hover, #wp-calendar #prev a[disabled]:hover, #wp-calendar #next a[disabled]:hover, .btn-warning[disabled]:focus, #wp-calendar #prev a[disabled]:focus, #wp-calendar #next a[disabled]:focus, .btn-warning[disabled].focus, #wp-calendar #prev a[disabled].focus, #wp-calendar #next a[disabled].focus,
   fieldset[disabled] .btn-warning:hover,
-  fieldset[disabled] #wp-calendar #prev a:hover, #wp-calendar #prev
-  fieldset[disabled] a:hover,
-  fieldset[disabled] #wp-calendar #next a:hover, #wp-calendar #next
-  fieldset[disabled] a:hover,
+  fieldset[disabled] #wp-calendar #prev a:hover,
+  #wp-calendar #prev fieldset[disabled] a:hover,
+  fieldset[disabled] #wp-calendar #next a:hover,
+  #wp-calendar #next fieldset[disabled] a:hover,
   fieldset[disabled] .btn-warning:focus,
-  fieldset[disabled] #wp-calendar #prev a:focus, #wp-calendar #prev
-  fieldset[disabled] a:focus,
-  fieldset[disabled] #wp-calendar #next a:focus, #wp-calendar #next
-  fieldset[disabled] a:focus,
+  fieldset[disabled] #wp-calendar #prev a:focus,
+  #wp-calendar #prev fieldset[disabled] a:focus,
+  fieldset[disabled] #wp-calendar #next a:focus,
+  #wp-calendar #next fieldset[disabled] a:focus,
   fieldset[disabled] .btn-warning.focus,
-  fieldset[disabled] #wp-calendar #prev a.focus, #wp-calendar #prev
-  fieldset[disabled] a.focus,
-  fieldset[disabled] #wp-calendar #next a.focus, #wp-calendar #next
-  fieldset[disabled] a.focus {
-    background-color: #f0ad4e;
-    border-color: #eea236; }
+  fieldset[disabled] #wp-calendar #prev a.focus,
+  #wp-calendar #prev fieldset[disabled] a.focus,
+  fieldset[disabled] #wp-calendar #next a.focus,
+  #wp-calendar #next fieldset[disabled] a.focus {
+    background-color: #ff8700;
+    border-color: #e67a00; }
   .btn-warning .badge, #wp-calendar #prev a .badge, #wp-calendar #next a .badge {
-    color: #f0ad4e;
+    color: #ff8700;
     background-color: #fff; }
 
 .btn-danger {
@@ -3280,7 +3338,7 @@ fieldset[disabled] a#searchsubmit {
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #23527c;
+    color: #22527b;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus,
@@ -3487,70 +3545,70 @@ tbody.collapse.in {
   vertical-align: middle; }
   .btn-group > .btn, .btn-group > .comment-reply-link, .comment-respond .btn-group > #submit, #wp-calendar #prev .btn-group > a, #wp-calendar #next .btn-group > a, #wp-calendar td .btn-group > a, #searchform .btn-group > #searchsubmit,
   .btn-group-vertical > .btn,
-  .btn-group-vertical > .comment-reply-link, .comment-respond
-  .btn-group-vertical > #submit, #wp-calendar #prev
-  .btn-group-vertical > a, #wp-calendar #next
-  .btn-group-vertical > a, #wp-calendar td
-  .btn-group-vertical > a, #searchform
-  .btn-group-vertical > #searchsubmit {
+  .btn-group-vertical > .comment-reply-link,
+  .comment-respond .btn-group-vertical > #submit,
+  #wp-calendar #prev .btn-group-vertical > a,
+  #wp-calendar #next .btn-group-vertical > a,
+  #wp-calendar td .btn-group-vertical > a,
+  #searchform .btn-group-vertical > #searchsubmit {
     position: relative;
     float: left; }
     .btn-group > .btn:hover, .btn-group > .comment-reply-link:hover, .comment-respond .btn-group > #submit:hover, #wp-calendar #prev .btn-group > a:hover, #wp-calendar #next .btn-group > a:hover, #wp-calendar td .btn-group > a:hover, #searchform .btn-group > #searchsubmit:hover, .btn-group > .btn:focus, .btn-group > .comment-reply-link:focus, .comment-respond .btn-group > #submit:focus, #wp-calendar #prev .btn-group > a:focus, #wp-calendar #next .btn-group > a:focus, #wp-calendar td .btn-group > a:focus, #searchform .btn-group > #searchsubmit:focus, .btn-group > .btn:active, .btn-group > .comment-reply-link:active, .comment-respond .btn-group > #submit:active, #wp-calendar #prev .btn-group > a:active, #wp-calendar #next .btn-group > a:active, #wp-calendar td .btn-group > a:active, #searchform .btn-group > #searchsubmit:active, .btn-group > .btn.active, .btn-group > .active.comment-reply-link, .comment-respond .btn-group > .active#submit, #wp-calendar #prev .btn-group > a.active, #wp-calendar #next .btn-group > a.active, #wp-calendar td .btn-group > a.active, #searchform .btn-group > .active#searchsubmit,
     .btn-group-vertical > .btn:hover,
-    .btn-group-vertical > .comment-reply-link:hover, .comment-respond
-    .btn-group-vertical > #submit:hover, #wp-calendar #prev
-    .btn-group-vertical > a:hover, #wp-calendar #next
-    .btn-group-vertical > a:hover, #wp-calendar td
-    .btn-group-vertical > a:hover, #searchform
-    .btn-group-vertical > #searchsubmit:hover,
+    .btn-group-vertical > .comment-reply-link:hover,
+    .comment-respond .btn-group-vertical > #submit:hover,
+    #wp-calendar #prev .btn-group-vertical > a:hover,
+    #wp-calendar #next .btn-group-vertical > a:hover,
+    #wp-calendar td .btn-group-vertical > a:hover,
+    #searchform .btn-group-vertical > #searchsubmit:hover,
     .btn-group-vertical > .btn:focus,
-    .btn-group-vertical > .comment-reply-link:focus, .comment-respond
-    .btn-group-vertical > #submit:focus, #wp-calendar #prev
-    .btn-group-vertical > a:focus, #wp-calendar #next
-    .btn-group-vertical > a:focus, #wp-calendar td
-    .btn-group-vertical > a:focus, #searchform
-    .btn-group-vertical > #searchsubmit:focus,
+    .btn-group-vertical > .comment-reply-link:focus,
+    .comment-respond .btn-group-vertical > #submit:focus,
+    #wp-calendar #prev .btn-group-vertical > a:focus,
+    #wp-calendar #next .btn-group-vertical > a:focus,
+    #wp-calendar td .btn-group-vertical > a:focus,
+    #searchform .btn-group-vertical > #searchsubmit:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .comment-reply-link:active, .comment-respond
-    .btn-group-vertical > #submit:active, #wp-calendar #prev
-    .btn-group-vertical > a:active, #wp-calendar #next
-    .btn-group-vertical > a:active, #wp-calendar td
-    .btn-group-vertical > a:active, #searchform
-    .btn-group-vertical > #searchsubmit:active,
+    .btn-group-vertical > .comment-reply-link:active,
+    .comment-respond .btn-group-vertical > #submit:active,
+    #wp-calendar #prev .btn-group-vertical > a:active,
+    #wp-calendar #next .btn-group-vertical > a:active,
+    #wp-calendar td .btn-group-vertical > a:active,
+    #searchform .btn-group-vertical > #searchsubmit:active,
     .btn-group-vertical > .btn.active,
-    .btn-group-vertical > .active.comment-reply-link, .comment-respond
-    .btn-group-vertical > .active#submit, #wp-calendar #prev
-    .btn-group-vertical > a.active, #wp-calendar #next
-    .btn-group-vertical > a.active, #wp-calendar td
-    .btn-group-vertical > a.active, #searchform
-    .btn-group-vertical > .active#searchsubmit {
+    .btn-group-vertical > .active.comment-reply-link,
+    .comment-respond .btn-group-vertical > .active#submit,
+    #wp-calendar #prev .btn-group-vertical > a.active,
+    #wp-calendar #next .btn-group-vertical > a.active,
+    #wp-calendar td .btn-group-vertical > a.active,
+    #searchform .btn-group-vertical > .active#searchsubmit {
       z-index: 2; }
 
 .btn-group .btn + .btn, .btn-group .comment-reply-link + .btn, .btn-group .comment-respond #submit + .btn, .comment-respond .btn-group #submit + .btn, .btn-group #wp-calendar #prev a + .btn, #wp-calendar #prev .btn-group a + .btn, .btn-group #wp-calendar #next a + .btn, #wp-calendar #next .btn-group a + .btn, .btn-group #wp-calendar td a + .btn, #wp-calendar td .btn-group a + .btn, .btn-group #searchform #searchsubmit + .btn, #searchform .btn-group #searchsubmit + .btn, .btn-group .btn + .comment-reply-link, .btn-group .comment-reply-link + .comment-reply-link, .btn-group .comment-respond #submit + .comment-reply-link, .comment-respond .btn-group #submit + .comment-reply-link, .btn-group #wp-calendar #prev a + .comment-reply-link, #wp-calendar #prev .btn-group a + .comment-reply-link, .btn-group #wp-calendar #next a + .comment-reply-link, #wp-calendar #next .btn-group a + .comment-reply-link, .btn-group #wp-calendar td a + .comment-reply-link, #wp-calendar td .btn-group a + .comment-reply-link, .btn-group #searchform #searchsubmit + .comment-reply-link, #searchform .btn-group #searchsubmit + .comment-reply-link, .btn-group .comment-respond .btn + #submit, .comment-respond .btn-group .btn + #submit, .btn-group .comment-respond .comment-reply-link + #submit, .comment-respond .btn-group .comment-reply-link + #submit, .btn-group .comment-respond #submit + #submit, .comment-respond .btn-group #submit + #submit, .btn-group #wp-calendar #prev .comment-respond a + #submit, .comment-respond .btn-group #wp-calendar #prev a + #submit, #wp-calendar #prev .btn-group .comment-respond a + #submit, .comment-respond #wp-calendar #prev .btn-group a + #submit, .btn-group #wp-calendar #next .comment-respond a + #submit, .comment-respond .btn-group #wp-calendar #next a + #submit, #wp-calendar #next .btn-group .comment-respond a + #submit, .comment-respond #wp-calendar #next .btn-group a + #submit, .btn-group #wp-calendar td .comment-respond a + #submit, .comment-respond .btn-group #wp-calendar td a + #submit, #wp-calendar td .btn-group .comment-respond a + #submit, .comment-respond #wp-calendar td .btn-group a + #submit, .btn-group #searchform .comment-respond #searchsubmit + #submit, .comment-respond .btn-group #searchform #searchsubmit + #submit, #searchform .btn-group .comment-respond #searchsubmit + #submit, .comment-respond #searchform .btn-group #searchsubmit + #submit, .btn-group #wp-calendar #prev .btn + a, #wp-calendar #prev .btn-group .btn + a, .btn-group #wp-calendar #prev .comment-reply-link + a, #wp-calendar #prev .btn-group .comment-reply-link + a, .btn-group .comment-respond #wp-calendar #prev #submit + a, #wp-calendar #prev .btn-group .comment-respond #submit + a, .comment-respond .btn-group #wp-calendar #prev #submit + a, #wp-calendar #prev .comment-respond .btn-group #submit + a, .btn-group #wp-calendar #prev a + a, #wp-calendar #prev .btn-group a + a, #wp-calendar #next .btn-group #prev a + a, #wp-calendar td .btn-group #prev a + a, .btn-group #searchform #wp-calendar #prev #searchsubmit + a, #wp-calendar #prev .btn-group #searchform #searchsubmit + a, #searchform .btn-group #wp-calendar #prev #searchsubmit + a, #wp-calendar #prev #searchform .btn-group #searchsubmit + a, .btn-group #wp-calendar #next .btn + a, #wp-calendar #next .btn-group .btn + a, .btn-group #wp-calendar #next .comment-reply-link + a, #wp-calendar #next .btn-group .comment-reply-link + a, .btn-group .comment-respond #wp-calendar #next #submit + a, #wp-calendar #next .btn-group .comment-respond #submit + a, .comment-respond .btn-group #wp-calendar #next #submit + a, #wp-calendar #next .comment-respond .btn-group #submit + a, #wp-calendar #prev .btn-group #next a + a, .btn-group #wp-calendar #next a + a, #wp-calendar #next .btn-group a + a, #wp-calendar td .btn-group #next a + a, .btn-group #searchform #wp-calendar #next #searchsubmit + a, #wp-calendar #next .btn-group #searchform #searchsubmit + a, #searchform .btn-group #wp-calendar #next #searchsubmit + a, #wp-calendar #next #searchform .btn-group #searchsubmit + a, .btn-group #wp-calendar td .btn + a, #wp-calendar td .btn-group .btn + a, .btn-group #wp-calendar td .comment-reply-link + a, #wp-calendar td .btn-group .comment-reply-link + a, .btn-group .comment-respond #wp-calendar td #submit + a, #wp-calendar td .btn-group .comment-respond #submit + a, .comment-respond .btn-group #wp-calendar td #submit + a, #wp-calendar td .comment-respond .btn-group #submit + a, .btn-group #wp-calendar #prev td a + a, #wp-calendar #prev .btn-group td a + a, .btn-group #wp-calendar #next td a + a, #wp-calendar #next .btn-group td a + a, .btn-group #wp-calendar td a + a, #wp-calendar td .btn-group a + a, .btn-group #searchform #wp-calendar td #searchsubmit + a, #wp-calendar td .btn-group #searchform #searchsubmit + a, #searchform .btn-group #wp-calendar td #searchsubmit + a, #wp-calendar td #searchform .btn-group #searchsubmit + a, .btn-group #searchform .btn + #searchsubmit, #searchform .btn-group .btn + #searchsubmit, .btn-group #searchform .comment-reply-link + #searchsubmit, #searchform .btn-group .comment-reply-link + #searchsubmit, .btn-group .comment-respond #searchform #submit + #searchsubmit, #searchform .btn-group .comment-respond #submit + #searchsubmit, .comment-respond .btn-group #searchform #submit + #searchsubmit, #searchform .comment-respond .btn-group #submit + #searchsubmit, .btn-group #wp-calendar #prev #searchform a + #searchsubmit, #searchform .btn-group #wp-calendar #prev a + #searchsubmit, #wp-calendar #prev .btn-group #searchform a + #searchsubmit, #searchform #wp-calendar #prev .btn-group a + #searchsubmit, .btn-group #wp-calendar #next #searchform a + #searchsubmit, #searchform .btn-group #wp-calendar #next a + #searchsubmit, #wp-calendar #next .btn-group #searchform a + #searchsubmit, #searchform #wp-calendar #next .btn-group a + #searchsubmit, .btn-group #wp-calendar td #searchform a + #searchsubmit, #searchform .btn-group #wp-calendar td a + #searchsubmit, #wp-calendar td .btn-group #searchform a + #searchsubmit, #searchform #wp-calendar td .btn-group a + #searchsubmit, .btn-group #searchform #searchsubmit + #searchsubmit, #searchform .btn-group #searchsubmit + #searchsubmit,
 .btn-group .btn + .btn-group,
 .btn-group .comment-reply-link + .btn-group,
-.btn-group .comment-respond #submit + .btn-group, .comment-respond
-.btn-group #submit + .btn-group,
-.btn-group #wp-calendar #prev a + .btn-group, #wp-calendar #prev
-.btn-group a + .btn-group,
-.btn-group #wp-calendar #next a + .btn-group, #wp-calendar #next
-.btn-group a + .btn-group,
-.btn-group #wp-calendar td a + .btn-group, #wp-calendar td
-.btn-group a + .btn-group,
-.btn-group #searchform #searchsubmit + .btn-group, #searchform
-.btn-group #searchsubmit + .btn-group,
+.btn-group .comment-respond #submit + .btn-group,
+.comment-respond .btn-group #submit + .btn-group,
+.btn-group #wp-calendar #prev a + .btn-group,
+#wp-calendar #prev .btn-group a + .btn-group,
+.btn-group #wp-calendar #next a + .btn-group,
+#wp-calendar #next .btn-group a + .btn-group,
+.btn-group #wp-calendar td a + .btn-group,
+#wp-calendar td .btn-group a + .btn-group,
+.btn-group #searchform #searchsubmit + .btn-group,
+#searchform .btn-group #searchsubmit + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .comment-reply-link,
-.btn-group .comment-respond .btn-group + #submit, .comment-respond
-.btn-group .btn-group + #submit,
-.btn-group #wp-calendar #prev .btn-group + a, #wp-calendar #prev
-.btn-group .btn-group + a,
-.btn-group #wp-calendar #next .btn-group + a, #wp-calendar #next
-.btn-group .btn-group + a,
-.btn-group #wp-calendar td .btn-group + a, #wp-calendar td
-.btn-group .btn-group + a,
-.btn-group #searchform .btn-group + #searchsubmit, #searchform
-.btn-group .btn-group + #searchsubmit,
+.btn-group .comment-respond .btn-group + #submit,
+.comment-respond .btn-group .btn-group + #submit,
+.btn-group #wp-calendar #prev .btn-group + a,
+#wp-calendar #prev .btn-group .btn-group + a,
+.btn-group #wp-calendar #next .btn-group + a,
+#wp-calendar #next .btn-group .btn-group + a,
+.btn-group #wp-calendar td .btn-group + a,
+#wp-calendar td .btn-group .btn-group + a,
+.btn-group #searchform .btn-group + #searchsubmit,
+#searchform .btn-group .btn-group + #searchsubmit,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
@@ -3628,15 +3686,22 @@ tbody.collapse.in {
 .dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .comment-reply-link .caret, .dropup .comment-respond .btn-group-lg > #submit .caret, .comment-respond .dropup .btn-group-lg > #submit .caret, .dropup #wp-calendar #prev .btn-group-lg > a .caret, #wp-calendar #prev .dropup .btn-group-lg > a .caret, .dropup #wp-calendar #next .btn-group-lg > a .caret, #wp-calendar #next .dropup .btn-group-lg > a .caret, .dropup #wp-calendar td .btn-group-lg > a .caret, #wp-calendar td .dropup .btn-group-lg > a .caret, .dropup #searchform .btn-group-lg > #searchsubmit .caret, #searchform .dropup .btn-group-lg > #searchsubmit .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .comment-reply-link, .comment-respond .btn-group-vertical > #submit, #wp-calendar #prev .btn-group-vertical > a, #wp-calendar #next .btn-group-vertical > a, #wp-calendar td .btn-group-vertical > a, #searchform .btn-group-vertical > #searchsubmit,
+
+.btn-group-vertical > .btn,
+.btn-group-vertical > .comment-reply-link,
+.comment-respond .btn-group-vertical > #submit,
+#wp-calendar #prev .btn-group-vertical > a,
+#wp-calendar #next .btn-group-vertical > a,
+#wp-calendar td .btn-group-vertical > a,
+#searchform .btn-group-vertical > #searchsubmit,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
-.btn-group-vertical > .btn-group > .comment-reply-link, .comment-respond
-.btn-group-vertical > .btn-group > #submit, #wp-calendar #prev
-.btn-group-vertical > .btn-group > a, #wp-calendar #next
-.btn-group-vertical > .btn-group > a, #wp-calendar td
-.btn-group-vertical > .btn-group > a, #searchform
-.btn-group-vertical > .btn-group > #searchsubmit {
+.btn-group-vertical > .btn-group > .comment-reply-link,
+.comment-respond .btn-group-vertical > .btn-group > #submit,
+#wp-calendar #prev .btn-group-vertical > .btn-group > a,
+#wp-calendar #next .btn-group-vertical > .btn-group > a,
+#wp-calendar td .btn-group-vertical > .btn-group > a,
+#searchform .btn-group-vertical > .btn-group > #searchsubmit {
   display: block;
   float: none;
   width: 100%;
@@ -3649,24 +3714,31 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .comment-reply-link, .comment-respond .btn-group-vertical > .btn-group > #submit, #wp-calendar #prev .btn-group-vertical > .btn-group > a, #wp-calendar #next .btn-group-vertical > .btn-group > a, #wp-calendar td .btn-group-vertical > .btn-group > a, #searchform .btn-group-vertical > .btn-group > #searchsubmit {
+
+.btn-group-vertical > .btn-group > .btn,
+.btn-group-vertical > .btn-group > .comment-reply-link,
+.comment-respond .btn-group-vertical > .btn-group > #submit,
+#wp-calendar #prev .btn-group-vertical > .btn-group > a,
+#wp-calendar #next .btn-group-vertical > .btn-group > a,
+#wp-calendar td .btn-group-vertical > .btn-group > a,
+#searchform .btn-group-vertical > .btn-group > #searchsubmit {
   float: none; }
 
 .btn-group-vertical > .btn + .btn, .btn-group-vertical > .comment-reply-link + .btn, .comment-respond .btn-group-vertical > #submit + .btn, #wp-calendar #prev .btn-group-vertical > a + .btn, #wp-calendar #next .btn-group-vertical > a + .btn, #wp-calendar td .btn-group-vertical > a + .btn, #searchform .btn-group-vertical > #searchsubmit + .btn, .btn-group-vertical > .btn + .comment-reply-link, .btn-group-vertical > .comment-reply-link + .comment-reply-link, .comment-respond .btn-group-vertical > #submit + .comment-reply-link, #wp-calendar #prev .btn-group-vertical > a + .comment-reply-link, #wp-calendar #next .btn-group-vertical > a + .comment-reply-link, #wp-calendar td .btn-group-vertical > a + .comment-reply-link, #searchform .btn-group-vertical > #searchsubmit + .comment-reply-link, .comment-respond .btn-group-vertical > .btn + #submit, .comment-respond .btn-group-vertical > .comment-reply-link + #submit, .comment-respond .btn-group-vertical > #submit + #submit, #wp-calendar #prev .comment-respond .btn-group-vertical > a + #submit, .comment-respond #wp-calendar #prev .btn-group-vertical > a + #submit, #wp-calendar #next .comment-respond .btn-group-vertical > a + #submit, .comment-respond #wp-calendar #next .btn-group-vertical > a + #submit, #wp-calendar td .comment-respond .btn-group-vertical > a + #submit, .comment-respond #wp-calendar td .btn-group-vertical > a + #submit, #searchform .comment-respond .btn-group-vertical > #searchsubmit + #submit, .comment-respond #searchform .btn-group-vertical > #searchsubmit + #submit, #wp-calendar #prev .btn-group-vertical > .btn + a, #wp-calendar #prev .btn-group-vertical > .comment-reply-link + a, .comment-respond #wp-calendar #prev .btn-group-vertical > #submit + a, #wp-calendar #prev .comment-respond .btn-group-vertical > #submit + a, #wp-calendar #prev .btn-group-vertical > a + a, #searchform #wp-calendar #prev .btn-group-vertical > #searchsubmit + a, #wp-calendar #prev #searchform .btn-group-vertical > #searchsubmit + a, #wp-calendar #next .btn-group-vertical > .btn + a, #wp-calendar #next .btn-group-vertical > .comment-reply-link + a, .comment-respond #wp-calendar #next .btn-group-vertical > #submit + a, #wp-calendar #next .comment-respond .btn-group-vertical > #submit + a, #wp-calendar #next .btn-group-vertical > a + a, #searchform #wp-calendar #next .btn-group-vertical > #searchsubmit + a, #wp-calendar #next #searchform .btn-group-vertical > #searchsubmit + a, #wp-calendar td .btn-group-vertical > .btn + a, #wp-calendar td .btn-group-vertical > .comment-reply-link + a, .comment-respond #wp-calendar td .btn-group-vertical > #submit + a, #wp-calendar td .comment-respond .btn-group-vertical > #submit + a, #wp-calendar #prev td .btn-group-vertical > a + a, #wp-calendar #next td .btn-group-vertical > a + a, #wp-calendar td .btn-group-vertical > a + a, #searchform #wp-calendar td .btn-group-vertical > #searchsubmit + a, #wp-calendar td #searchform .btn-group-vertical > #searchsubmit + a, #searchform .btn-group-vertical > .btn + #searchsubmit, #searchform .btn-group-vertical > .comment-reply-link + #searchsubmit, .comment-respond #searchform .btn-group-vertical > #submit + #searchsubmit, #searchform .comment-respond .btn-group-vertical > #submit + #searchsubmit, #wp-calendar #prev #searchform .btn-group-vertical > a + #searchsubmit, #searchform #wp-calendar #prev .btn-group-vertical > a + #searchsubmit, #wp-calendar #next #searchform .btn-group-vertical > a + #searchsubmit, #searchform #wp-calendar #next .btn-group-vertical > a + #searchsubmit, #wp-calendar td #searchform .btn-group-vertical > a + #searchsubmit, #searchform #wp-calendar td .btn-group-vertical > a + #searchsubmit, #searchform .btn-group-vertical > #searchsubmit + #searchsubmit,
 .btn-group-vertical > .btn + .btn-group,
-.btn-group-vertical > .comment-reply-link + .btn-group, .comment-respond
-.btn-group-vertical > #submit + .btn-group, #wp-calendar #prev
-.btn-group-vertical > a + .btn-group, #wp-calendar #next
-.btn-group-vertical > a + .btn-group, #wp-calendar td
-.btn-group-vertical > a + .btn-group, #searchform
-.btn-group-vertical > #searchsubmit + .btn-group,
+.btn-group-vertical > .comment-reply-link + .btn-group,
+.comment-respond .btn-group-vertical > #submit + .btn-group,
+#wp-calendar #prev .btn-group-vertical > a + .btn-group,
+#wp-calendar #next .btn-group-vertical > a + .btn-group,
+#wp-calendar td .btn-group-vertical > a + .btn-group,
+#searchform .btn-group-vertical > #searchsubmit + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
-.btn-group-vertical > .btn-group + .comment-reply-link, .comment-respond
-.btn-group-vertical > .btn-group + #submit, #wp-calendar #prev
-.btn-group-vertical > .btn-group + a, #wp-calendar #next
-.btn-group-vertical > .btn-group + a, #wp-calendar td
-.btn-group-vertical > .btn-group + a, #searchform
-.btn-group-vertical > .btn-group + #searchsubmit,
+.btn-group-vertical > .btn-group + .comment-reply-link,
+.comment-respond .btn-group-vertical > .btn-group + #submit,
+#wp-calendar #prev .btn-group-vertical > .btn-group + a,
+#wp-calendar #next .btn-group-vertical > .btn-group + a,
+#wp-calendar td .btn-group-vertical > .btn-group + a,
+#searchform .btn-group-vertical > .btn-group + #searchsubmit,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
@@ -3715,26 +3787,26 @@ tbody.collapse.in {
 
 [data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .comment-reply-link input[type="radio"], .comment-respond [data-toggle="buttons"] > #submit input[type="radio"], #wp-calendar #prev [data-toggle="buttons"] > a input[type="radio"], #wp-calendar #next [data-toggle="buttons"] > a input[type="radio"], #wp-calendar td [data-toggle="buttons"] > a input[type="radio"], #searchform [data-toggle="buttons"] > #searchsubmit input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .comment-reply-link input[type="checkbox"], .comment-respond
-[data-toggle="buttons"] > #submit input[type="checkbox"], #wp-calendar #prev
-[data-toggle="buttons"] > a input[type="checkbox"], #wp-calendar #next
-[data-toggle="buttons"] > a input[type="checkbox"], #wp-calendar td
-[data-toggle="buttons"] > a input[type="checkbox"], #searchform
-[data-toggle="buttons"] > #searchsubmit input[type="checkbox"],
+[data-toggle="buttons"] > .comment-reply-link input[type="checkbox"],
+.comment-respond [data-toggle="buttons"] > #submit input[type="checkbox"],
+#wp-calendar #prev [data-toggle="buttons"] > a input[type="checkbox"],
+#wp-calendar #next [data-toggle="buttons"] > a input[type="checkbox"],
+#wp-calendar td [data-toggle="buttons"] > a input[type="checkbox"],
+#searchform [data-toggle="buttons"] > #searchsubmit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="radio"], .comment-respond
-[data-toggle="buttons"] > .btn-group > #submit input[type="radio"], #wp-calendar #prev
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], #wp-calendar #next
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], #wp-calendar td
-[data-toggle="buttons"] > .btn-group > a input[type="radio"], #searchform
-[data-toggle="buttons"] > .btn-group > #searchsubmit input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="radio"],
+.comment-respond [data-toggle="buttons"] > .btn-group > #submit input[type="radio"],
+#wp-calendar #prev [data-toggle="buttons"] > .btn-group > a input[type="radio"],
+#wp-calendar #next [data-toggle="buttons"] > .btn-group > a input[type="radio"],
+#wp-calendar td [data-toggle="buttons"] > .btn-group > a input[type="radio"],
+#searchform [data-toggle="buttons"] > .btn-group > #searchsubmit input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="checkbox"], .comment-respond
-[data-toggle="buttons"] > .btn-group > #submit input[type="checkbox"], #wp-calendar #prev
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #wp-calendar #next
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #wp-calendar td
-[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], #searchform
-[data-toggle="buttons"] > .btn-group > #searchsubmit input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .comment-reply-link input[type="checkbox"],
+.comment-respond [data-toggle="buttons"] > .btn-group > #submit input[type="checkbox"],
+#wp-calendar #prev [data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
+#wp-calendar #next [data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
+#wp-calendar td [data-toggle="buttons"] > .btn-group > a input[type="checkbox"],
+#searchform [data-toggle="buttons"] > .btn-group > #searchsubmit input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -3757,16 +3829,13 @@ tbody.collapse.in {
       z-index: 3; }
 
 .input-group-addon,
-.input-group-btn,
-.input-group .form-control,
-.input-group #searchform #s, #searchform
-.input-group #s {
+.input-group-btn, .input-group .form-control, .input-group #searchform #s, #searchform .input-group #s {
   display: table-cell; }
   .input-group-addon:not(:first-child):not(:last-child),
   .input-group-btn:not(:first-child):not(:last-child),
   .input-group .form-control:not(:first-child):not(:last-child),
-  .input-group #searchform #s:not(:first-child):not(:last-child), #searchform
-  .input-group #s:not(:first-child):not(:last-child) {
+  .input-group #searchform #s:not(:first-child):not(:last-child),
+  #searchform .input-group #s:not(:first-child):not(:last-child) {
     border-radius: 0; }
 
 .input-group-addon,
@@ -3787,25 +3856,13 @@ tbody.collapse.in {
   border-radius: 4px; }
   .input-group-addon.input-sm, #searchform .input-group-sm > .input-group-addon#s,
   .input-group-sm > .input-group-addon,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn,
-  .input-group-sm > .input-group-btn > .input-group-addon.comment-reply-link, .comment-respond
-  .input-group-sm > .input-group-btn > .input-group-addon#submit, #wp-calendar #prev
-  .input-group-sm > .input-group-btn > a.input-group-addon, #wp-calendar #next
-  .input-group-sm > .input-group-btn > a.input-group-addon, #wp-calendar td
-  .input-group-sm > .input-group-btn > a.input-group-addon, #searchform
-  .input-group-sm > .input-group-btn > .input-group-addon#searchsubmit {
+  .input-group-sm > .input-group-btn > .input-group-addon.btn, .input-group-sm > .input-group-btn > .input-group-addon.comment-reply-link, .comment-respond .input-group-sm > .input-group-btn > .input-group-addon#submit, #wp-calendar #prev .input-group-sm > .input-group-btn > a.input-group-addon, #wp-calendar #next .input-group-sm > .input-group-btn > a.input-group-addon, #wp-calendar td .input-group-sm > .input-group-btn > a.input-group-addon, #searchform .input-group-sm > .input-group-btn > .input-group-addon#searchsubmit {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 3px; }
   .input-group-addon.input-lg, #searchform .input-group-lg > .input-group-addon#s,
   .input-group-lg > .input-group-addon,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn,
-  .input-group-lg > .input-group-btn > .input-group-addon.comment-reply-link, .comment-respond
-  .input-group-lg > .input-group-btn > .input-group-addon#submit, #wp-calendar #prev
-  .input-group-lg > .input-group-btn > a.input-group-addon, #wp-calendar #next
-  .input-group-lg > .input-group-btn > a.input-group-addon, #wp-calendar td
-  .input-group-lg > .input-group-btn > a.input-group-addon, #searchform
-  .input-group-lg > .input-group-btn > .input-group-addon#searchsubmit {
+  .input-group-lg > .input-group-btn > .input-group-addon.btn, .input-group-lg > .input-group-btn > .input-group-addon.comment-reply-link, .comment-respond .input-group-lg > .input-group-btn > .input-group-addon#submit, #wp-calendar #prev .input-group-lg > .input-group-btn > a.input-group-addon, #wp-calendar #next .input-group-lg > .input-group-btn > a.input-group-addon, #wp-calendar td .input-group-lg > .input-group-btn > a.input-group-addon, #searchform .input-group-lg > .input-group-btn > .input-group-addon#searchsubmit {
     padding: 10px 16px;
     font-size: 18px;
     border-radius: 6px; }
@@ -3816,34 +3873,34 @@ tbody.collapse.in {
 .input-group .form-control:first-child, .input-group #searchform #s:first-child, #searchform .input-group #s:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .comment-reply-link, .comment-respond
-.input-group-btn:first-child > #submit, #wp-calendar #prev
-.input-group-btn:first-child > a, #wp-calendar #next
-.input-group-btn:first-child > a, #wp-calendar td
-.input-group-btn:first-child > a, #searchform
-.input-group-btn:first-child > #searchsubmit,
+.input-group-btn:first-child > .comment-reply-link,
+.comment-respond .input-group-btn:first-child > #submit,
+#wp-calendar #prev .input-group-btn:first-child > a,
+#wp-calendar #next .input-group-btn:first-child > a,
+#wp-calendar td .input-group-btn:first-child > a,
+#searchform .input-group-btn:first-child > #searchsubmit,
 .input-group-btn:first-child > .btn-group > .btn,
-.input-group-btn:first-child > .btn-group > .comment-reply-link, .comment-respond
-.input-group-btn:first-child > .btn-group > #submit, #wp-calendar #prev
-.input-group-btn:first-child > .btn-group > a, #wp-calendar #next
-.input-group-btn:first-child > .btn-group > a, #wp-calendar td
-.input-group-btn:first-child > .btn-group > a, #searchform
-.input-group-btn:first-child > .btn-group > #searchsubmit,
+.input-group-btn:first-child > .btn-group > .comment-reply-link,
+.comment-respond .input-group-btn:first-child > .btn-group > #submit,
+#wp-calendar #prev .input-group-btn:first-child > .btn-group > a,
+#wp-calendar #next .input-group-btn:first-child > .btn-group > a,
+#wp-calendar td .input-group-btn:first-child > .btn-group > a,
+#searchform .input-group-btn:first-child > .btn-group > #searchsubmit,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .comment-reply-link:not(:last-child):not(.dropdown-toggle), .comment-respond
-.input-group-btn:last-child > #submit:not(:last-child):not(.dropdown-toggle), #wp-calendar #prev
-.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #wp-calendar #next
-.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #wp-calendar td
-.input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle), #searchform
-.input-group-btn:last-child > #searchsubmit:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .comment-reply-link:not(:last-child):not(.dropdown-toggle),
+.comment-respond .input-group-btn:last-child > #submit:not(:last-child):not(.dropdown-toggle),
+#wp-calendar #prev .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
+#wp-calendar #next .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
+#wp-calendar td .input-group-btn:last-child > a:not(:last-child):not(.dropdown-toggle),
+#searchform .input-group-btn:last-child > #searchsubmit:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-.input-group-btn:last-child > .btn-group:not(:last-child) > .comment-reply-link, .comment-respond
-.input-group-btn:last-child > .btn-group:not(:last-child) > #submit, #wp-calendar #prev
-.input-group-btn:last-child > .btn-group:not(:last-child) > a, #wp-calendar #next
-.input-group-btn:last-child > .btn-group:not(:last-child) > a, #wp-calendar td
-.input-group-btn:last-child > .btn-group:not(:last-child) > a, #searchform
-.input-group-btn:last-child > .btn-group:not(:last-child) > #searchsubmit {
+.input-group-btn:last-child > .btn-group:not(:last-child) > .comment-reply-link,
+.comment-respond .input-group-btn:last-child > .btn-group:not(:last-child) > #submit,
+#wp-calendar #prev .input-group-btn:last-child > .btn-group:not(:last-child) > a,
+#wp-calendar #next .input-group-btn:last-child > .btn-group:not(:last-child) > a,
+#wp-calendar td .input-group-btn:last-child > .btn-group:not(:last-child) > a,
+#searchform .input-group-btn:last-child > .btn-group:not(:last-child) > #searchsubmit {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
@@ -3853,34 +3910,34 @@ tbody.collapse.in {
 .input-group .form-control:last-child, .input-group #searchform #s:last-child, #searchform .input-group #s:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
-.input-group-btn:last-child > .comment-reply-link, .comment-respond
-.input-group-btn:last-child > #submit, #wp-calendar #prev
-.input-group-btn:last-child > a, #wp-calendar #next
-.input-group-btn:last-child > a, #wp-calendar td
-.input-group-btn:last-child > a, #searchform
-.input-group-btn:last-child > #searchsubmit,
+.input-group-btn:last-child > .comment-reply-link,
+.comment-respond .input-group-btn:last-child > #submit,
+#wp-calendar #prev .input-group-btn:last-child > a,
+#wp-calendar #next .input-group-btn:last-child > a,
+#wp-calendar td .input-group-btn:last-child > a,
+#searchform .input-group-btn:last-child > #searchsubmit,
 .input-group-btn:last-child > .btn-group > .btn,
-.input-group-btn:last-child > .btn-group > .comment-reply-link, .comment-respond
-.input-group-btn:last-child > .btn-group > #submit, #wp-calendar #prev
-.input-group-btn:last-child > .btn-group > a, #wp-calendar #next
-.input-group-btn:last-child > .btn-group > a, #wp-calendar td
-.input-group-btn:last-child > .btn-group > a, #searchform
-.input-group-btn:last-child > .btn-group > #searchsubmit,
+.input-group-btn:last-child > .btn-group > .comment-reply-link,
+.comment-respond .input-group-btn:last-child > .btn-group > #submit,
+#wp-calendar #prev .input-group-btn:last-child > .btn-group > a,
+#wp-calendar #next .input-group-btn:last-child > .btn-group > a,
+#wp-calendar td .input-group-btn:last-child > .btn-group > a,
+#searchform .input-group-btn:last-child > .btn-group > #searchsubmit,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .comment-reply-link:not(:first-child), .comment-respond
-.input-group-btn:first-child > #submit:not(:first-child), #wp-calendar #prev
-.input-group-btn:first-child > a:not(:first-child), #wp-calendar #next
-.input-group-btn:first-child > a:not(:first-child), #wp-calendar td
-.input-group-btn:first-child > a:not(:first-child), #searchform
-.input-group-btn:first-child > #searchsubmit:not(:first-child),
+.input-group-btn:first-child > .comment-reply-link:not(:first-child),
+.comment-respond .input-group-btn:first-child > #submit:not(:first-child),
+#wp-calendar #prev .input-group-btn:first-child > a:not(:first-child),
+#wp-calendar #next .input-group-btn:first-child > a:not(:first-child),
+#wp-calendar td .input-group-btn:first-child > a:not(:first-child),
+#searchform .input-group-btn:first-child > #searchsubmit:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
-.input-group-btn:first-child > .btn-group:not(:first-child) > .comment-reply-link, .comment-respond
-.input-group-btn:first-child > .btn-group:not(:first-child) > #submit, #wp-calendar #prev
-.input-group-btn:first-child > .btn-group:not(:first-child) > a, #wp-calendar #next
-.input-group-btn:first-child > .btn-group:not(:first-child) > a, #wp-calendar td
-.input-group-btn:first-child > .btn-group:not(:first-child) > a, #searchform
-.input-group-btn:first-child > .btn-group:not(:first-child) > #searchsubmit {
+.input-group-btn:first-child > .btn-group:not(:first-child) > .comment-reply-link,
+.comment-respond .input-group-btn:first-child > .btn-group:not(:first-child) > #submit,
+#wp-calendar #prev .input-group-btn:first-child > .btn-group:not(:first-child) > a,
+#wp-calendar #next .input-group-btn:first-child > .btn-group:not(:first-child) > a,
+#wp-calendar td .input-group-btn:first-child > .btn-group:not(:first-child) > a,
+#searchform .input-group-btn:first-child > .btn-group:not(:first-child) > #searchsubmit {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3897,10 +3954,24 @@ tbody.collapse.in {
       margin-left: -1px; }
     .input-group-btn > .btn:hover, .input-group-btn > .comment-reply-link:hover, .comment-respond .input-group-btn > #submit:hover, #wp-calendar #prev .input-group-btn > a:hover, #wp-calendar #next .input-group-btn > a:hover, #wp-calendar td .input-group-btn > a:hover, #searchform .input-group-btn > #searchsubmit:hover, .input-group-btn > .btn:focus, .input-group-btn > .comment-reply-link:focus, .comment-respond .input-group-btn > #submit:focus, #wp-calendar #prev .input-group-btn > a:focus, #wp-calendar #next .input-group-btn > a:focus, #wp-calendar td .input-group-btn > a:focus, #searchform .input-group-btn > #searchsubmit:focus, .input-group-btn > .btn:active, .input-group-btn > .comment-reply-link:active, .comment-respond .input-group-btn > #submit:active, #wp-calendar #prev .input-group-btn > a:active, #wp-calendar #next .input-group-btn > a:active, #wp-calendar td .input-group-btn > a:active, #searchform .input-group-btn > #searchsubmit:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .comment-reply-link, .comment-respond .input-group-btn:first-child > #submit, #wp-calendar #prev .input-group-btn:first-child > a, #wp-calendar #next .input-group-btn:first-child > a, #wp-calendar td .input-group-btn:first-child > a, #searchform .input-group-btn:first-child > #searchsubmit,
+  
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .comment-reply-link,
+  .comment-respond .input-group-btn:first-child > #submit,
+  #wp-calendar #prev .input-group-btn:first-child > a,
+  #wp-calendar #next .input-group-btn:first-child > a,
+  #wp-calendar td .input-group-btn:first-child > a,
+  #searchform .input-group-btn:first-child > #searchsubmit,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .comment-reply-link, .comment-respond .input-group-btn:last-child > #submit, #wp-calendar #prev .input-group-btn:last-child > a, #wp-calendar #next .input-group-btn:last-child > a, #wp-calendar td .input-group-btn:last-child > a, #searchform .input-group-btn:last-child > #searchsubmit,
+  
+  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .comment-reply-link,
+  .comment-respond .input-group-btn:last-child > #submit,
+  #wp-calendar #prev .input-group-btn:last-child > a,
+  #wp-calendar #next .input-group-btn:last-child > a,
+  #wp-calendar td .input-group-btn:last-child > a,
+  #searchform .input-group-btn:last-child > #searchsubmit,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -3956,7 +4027,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #fff;
+      background-color: #fafafa;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -4000,17 +4071,21 @@ tbody.collapse.in {
     margin-right: 0;
     border-radius: 4px; }
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-  .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
-  .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
+  .nav-tabs-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs-justified > .active > a:focus,
+  .nav-tabs.nav-justified > .active > a:focus {
     border: 1px solid #ddd; }
   @media (min-width: 768px) {
     .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
       border-bottom: 1px solid #ddd;
       border-radius: 4px 4px 0 0; }
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-    .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
-    .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #fff; } }
+    .nav-tabs-justified > .active > a:hover,
+    .nav-tabs.nav-justified > .active > a:hover,
+    .nav-tabs-justified > .active > a:focus,
+    .nav-tabs.nav-justified > .active > a:focus {
+      border-bottom-color: #fafafa; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -4227,8 +4302,8 @@ tbody.collapse.in {
       .navbar-form .input-group .input-group-addon,
       .navbar-form .input-group .input-group-btn,
       .navbar-form .input-group .form-control,
-      .navbar-form .input-group #searchform #s, #searchform
-      .navbar-form .input-group #s {
+      .navbar-form .input-group #searchform #s,
+      #searchform .navbar-form .input-group #s {
         width: auto; }
     .navbar-form .input-group > .form-control, .navbar-form #searchform .input-group > #s, #searchform .navbar-form .input-group > #s {
       width: 100%; }
@@ -4307,8 +4382,8 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7; }
+  background-color: #f9fafb;
+  border-color: #e5e9ee; }
   .navbar-default .navbar-brand {
     color: #777; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -4323,7 +4398,7 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #555;
-    background-color: #e7e7e7; }
+    background-color: #e5e9ee; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
@@ -4335,9 +4410,9 @@ tbody.collapse.in {
       background-color: #888; }
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
-    border-color: #e7e7e7; }
+    border-color: #e5e9ee; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #e7e7e7;
+    background-color: #e5e9ee;
     color: #555; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -4347,7 +4422,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #555;
-      background-color: #e7e7e7; }
+      background-color: #e5e9ee; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
@@ -4472,7 +4547,7 @@ tbody.collapse.in {
   .pagination > li > span:hover,
   .pagination > li > span:focus {
     z-index: 2;
-    color: #23527c;
+    color: #22527b;
     background-color: #eeeeee;
     border-color: #ddd; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
@@ -4594,7 +4669,7 @@ a.label:hover, a.label:focus {
 .label-primary {
   background-color: #337ab7; }
   .label-primary[href]:hover, .label-primary[href]:focus {
-    background-color: #286090; }
+    background-color: #285f8f; }
 
 .label-success {
   background-color: #5cb85c; }
@@ -4607,9 +4682,9 @@ a.label:hover, a.label:focus {
     background-color: #31b0d5; }
 
 .label-warning {
-  background-color: #f0ad4e; }
+  background-color: #ff8700; }
   .label-warning[href]:hover, .label-warning[href]:focus {
-    background-color: #ec971f; }
+    background-color: #cc6c00; }
 
 .label-danger {
   background-color: #d9534f; }
@@ -4636,12 +4711,12 @@ a.label:hover, a.label:focus {
     top: -1px; }
   .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .comment-reply-link .badge, .comment-respond .btn-group-xs > #submit .badge, #wp-calendar #prev .btn-group-xs > a .badge, #wp-calendar #next .btn-group-xs > a .badge, #wp-calendar td .btn-group-xs > a .badge, #searchform .btn-group-xs > #searchsubmit .badge,
   .btn-group-xs > .btn .badge,
-  .btn-group-xs > .comment-reply-link .badge, .comment-respond
-  .btn-group-xs > #submit .badge, #wp-calendar #prev
-  .btn-group-xs > a .badge, #wp-calendar #next
-  .btn-group-xs > a .badge, #wp-calendar td
-  .btn-group-xs > a .badge, #searchform
-  .btn-group-xs > #searchsubmit .badge {
+  .btn-group-xs > .comment-reply-link .badge,
+  .comment-respond .btn-group-xs > #submit .badge,
+  #wp-calendar #prev .btn-group-xs > a .badge,
+  #wp-calendar #next .btn-group-xs > a .badge,
+  #wp-calendar td .btn-group-xs > a .badge,
+  #searchform .btn-group-xs > #searchsubmit .badge {
     top: 0;
     padding: 1px 5px; }
   .list-group-item.active > .badge,
@@ -4699,7 +4774,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #fff;
+  background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -4847,7 +4922,7 @@ a.thumbnail.active {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
 
 .progress-bar-warning {
-  background-color: #f0ad4e; }
+  background-color: #ff8700; }
   .progress-striped .progress-bar-warning {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5482,8 +5557,8 @@ button.list-group-item-danger {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  border: 1px solid #ededed;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
@@ -5648,7 +5723,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5761,7 +5836,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5953,7 +6028,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: transparent; }
+  background-color: rgba(0, 0, 0, 0); }
   .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -6022,7 +6097,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0); }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -6284,41 +6359,14 @@ button.close {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .btn-default,
-.btn-primary,
-.btn-success,
-.comment-reply-link,
-.btn-info,
-.comment-respond #submit,
-#wp-calendar td a,
-#searchform #searchsubmit,
-.btn-warning,
-#wp-calendar #prev a,
-#wp-calendar #next a,
+.btn-primary, .btn-success, .comment-reply-link, .btn-info, .comment-respond #submit, #wp-calendar td a, #searchform #searchsubmit, .btn-warning, #wp-calendar #prev a, #wp-calendar #next a,
 .btn-danger {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
   .btn-default:active, .btn-default.active,
   .btn-primary:active,
-  .btn-primary.active,
-  .btn-success:active,
-  .comment-reply-link:active,
-  .btn-success.active,
-  .active.comment-reply-link,
-  .btn-info:active,
-  .comment-respond #submit:active,
-  #wp-calendar td a:active,
-  #searchform #searchsubmit:active,
-  .btn-info.active,
-  .comment-respond .active#submit,
-  #wp-calendar td a.active,
-  #searchform .active#searchsubmit,
-  .btn-warning:active,
-  #wp-calendar #prev a:active,
-  #wp-calendar #next a:active,
-  .btn-warning.active,
-  #wp-calendar #prev a.active,
-  #wp-calendar #next a.active,
+  .btn-primary.active, .btn-success:active, .comment-reply-link:active, .btn-success.active, .active.comment-reply-link, .btn-info:active, .comment-respond #submit:active, #wp-calendar td a:active, #searchform #searchsubmit:active, .btn-info.active, .comment-respond .active#submit, #wp-calendar td a.active, #searchform .active#searchsubmit, .btn-warning:active, #wp-calendar #prev a:active, #wp-calendar #next a:active, .btn-warning.active, #wp-calendar #prev a.active, #wp-calendar #next a.active,
   .btn-danger:active,
   .btn-danger.active {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -6332,43 +6380,35 @@ button.close {
   .btn-success.disabled,
   .disabled.comment-reply-link,
   .btn-success[disabled],
-  [disabled].comment-reply-link,
-  fieldset[disabled]
-  .btn-success,
+  .comment-reply-link[disabled],
+  fieldset[disabled] .btn-success,
   fieldset[disabled] .comment-reply-link,
   .btn-info.disabled,
   .comment-respond .disabled#submit,
   #wp-calendar td a.disabled,
   #searchform .disabled#searchsubmit,
   .btn-info[disabled],
-  .comment-respond [disabled]#submit,
+  .comment-respond #submit[disabled],
   #wp-calendar td a[disabled],
-  #searchform [disabled]#searchsubmit,
-  fieldset[disabled]
-  .btn-info,
+  #searchform #searchsubmit[disabled],
+  fieldset[disabled] .btn-info,
   fieldset[disabled] .comment-respond #submit,
-  .comment-respond
-  fieldset[disabled] #submit,
+  .comment-respond fieldset[disabled] #submit,
   fieldset[disabled] #wp-calendar td a,
-  #wp-calendar td
-  fieldset[disabled] a,
+  #wp-calendar td fieldset[disabled] a,
   fieldset[disabled] #searchform #searchsubmit,
-  #searchform
-  fieldset[disabled] #searchsubmit,
+  #searchform fieldset[disabled] #searchsubmit,
   .btn-warning.disabled,
   #wp-calendar #prev a.disabled,
   #wp-calendar #next a.disabled,
   .btn-warning[disabled],
   #wp-calendar #prev a[disabled],
   #wp-calendar #next a[disabled],
-  fieldset[disabled]
-  .btn-warning,
+  fieldset[disabled] .btn-warning,
   fieldset[disabled] #wp-calendar #prev a,
-  #wp-calendar #prev
-  fieldset[disabled] a,
+  #wp-calendar #prev fieldset[disabled] a,
   fieldset[disabled] #wp-calendar #next a,
-  #wp-calendar #next
-  fieldset[disabled] a,
+  #wp-calendar #next fieldset[disabled] a,
   .btn-danger.disabled,
   .btn-danger[disabled],
   fieldset[disabled]
@@ -6376,10 +6416,7 @@ button.close {
     -webkit-box-shadow: none;
     box-shadow: none; }
   .btn-default .badge,
-  .btn-primary .badge,
-  .btn-success .badge, .comment-reply-link .badge,
-  .btn-info .badge, .comment-respond #submit .badge, #wp-calendar td a .badge, #searchform #searchsubmit .badge,
-  .btn-warning .badge, #wp-calendar #prev a .badge, #wp-calendar #next a .badge,
+  .btn-primary .badge, .btn-success .badge, .comment-reply-link .badge, .btn-info .badge, .comment-respond #submit .badge, #wp-calendar td a .badge, #searchform #searchsubmit .badge, .btn-warning .badge, #wp-calendar #prev a .badge, #wp-calendar #next a .badge,
   .btn-danger .badge {
     text-shadow: none; }
 
@@ -6414,20 +6451,20 @@ button.close {
     background-image: none; }
 
 .btn-primary {
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
-  background-image: -o-linear-gradient(top, #337ab7 0%, #265a88 100%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a87 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0%, #265a87 100%);
+  background-image: linear-gradient(to bottom, #337ab7 0%, #265a87 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF265A88', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF265A87', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #245580; }
+  border-color: #23557f; }
   .btn-primary:hover, .btn-primary:focus {
-    background-color: #265a88;
+    background-color: #265a87;
     background-position: 0 -15px; }
   .btn-primary:active, .btn-primary.active {
-    background-color: #265a88;
-    border-color: #245580; }
+    background-color: #265a87;
+    border-color: #23557f; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active,
   fieldset[disabled] .btn-primary,
   fieldset[disabled] .btn-primary:hover,
@@ -6435,7 +6472,7 @@ button.close {
   fieldset[disabled] .btn-primary.focus,
   fieldset[disabled] .btn-primary:active,
   fieldset[disabled] .btn-primary.active {
-    background-color: #265a88;
+    background-color: #265a87;
     background-image: none; }
 
 .btn-success, .comment-reply-link {
@@ -6453,7 +6490,11 @@ button.close {
   .btn-success:active, .comment-reply-link:active, .btn-success.active, .active.comment-reply-link {
     background-color: #419641;
     border-color: #3e8f3e; }
-  .btn-success.disabled, .disabled.comment-reply-link, .btn-success.disabled:hover, .disabled.comment-reply-link:hover, .btn-success.disabled:focus, .disabled.comment-reply-link:focus, .btn-success.disabled.focus, .disabled.focus.comment-reply-link, .btn-success.disabled:active, .disabled.comment-reply-link:active, .btn-success.disabled.active, .disabled.active.comment-reply-link, .btn-success[disabled], [disabled].comment-reply-link, .btn-success[disabled]:hover, [disabled].comment-reply-link:hover, .btn-success[disabled]:focus, [disabled].comment-reply-link:focus, .btn-success[disabled].focus, [disabled].focus.comment-reply-link, .btn-success[disabled]:active, [disabled].comment-reply-link:active, .btn-success[disabled].active, [disabled].active.comment-reply-link,
+  
+  .btn-success.disabled,
+  .disabled.comment-reply-link, .btn-success.disabled:hover, .disabled.comment-reply-link:hover, .btn-success.disabled:focus, .disabled.comment-reply-link:focus, .btn-success.disabled.focus, .disabled.focus.comment-reply-link, .btn-success.disabled:active, .disabled.comment-reply-link:active, .btn-success.disabled.active, .disabled.active.comment-reply-link,
+  .btn-success[disabled],
+  .comment-reply-link[disabled], .btn-success[disabled]:hover, .comment-reply-link[disabled]:hover, .btn-success[disabled]:focus, .comment-reply-link[disabled]:focus, .btn-success[disabled].focus, .comment-reply-link[disabled].focus, .btn-success[disabled]:active, .comment-reply-link[disabled]:active, .btn-success[disabled].active, .comment-reply-link[disabled].active,
   fieldset[disabled] .btn-success,
   fieldset[disabled] .comment-reply-link,
   fieldset[disabled] .btn-success:hover,
@@ -6484,99 +6525,113 @@ button.close {
   .btn-info:active, .comment-respond #submit:active, #wp-calendar td a:active, #searchform #searchsubmit:active, .btn-info.active, .comment-respond .active#submit, #wp-calendar td a.active, #searchform .active#searchsubmit {
     background-color: #2aabd2;
     border-color: #28a4c9; }
-  .btn-info.disabled, .comment-respond .disabled#submit, #wp-calendar td a.disabled, #searchform .disabled#searchsubmit, .btn-info.disabled:hover, .comment-respond .disabled#submit:hover, #wp-calendar td a.disabled:hover, #searchform .disabled#searchsubmit:hover, .btn-info.disabled:focus, .comment-respond .disabled#submit:focus, #wp-calendar td a.disabled:focus, #searchform .disabled#searchsubmit:focus, .btn-info.disabled.focus, .comment-respond .disabled.focus#submit, #wp-calendar td a.disabled.focus, #searchform .disabled.focus#searchsubmit, .btn-info.disabled:active, .comment-respond .disabled#submit:active, #wp-calendar td a.disabled:active, #searchform .disabled#searchsubmit:active, .btn-info.disabled.active, .comment-respond .disabled.active#submit, #wp-calendar td a.disabled.active, #searchform .disabled.active#searchsubmit, .btn-info[disabled], .comment-respond [disabled]#submit, #wp-calendar td a[disabled], #searchform [disabled]#searchsubmit, .btn-info[disabled]:hover, .comment-respond [disabled]#submit:hover, #wp-calendar td a[disabled]:hover, #searchform [disabled]#searchsubmit:hover, .btn-info[disabled]:focus, .comment-respond [disabled]#submit:focus, #wp-calendar td a[disabled]:focus, #searchform [disabled]#searchsubmit:focus, .btn-info[disabled].focus, .comment-respond [disabled].focus#submit, #wp-calendar td a[disabled].focus, #searchform [disabled].focus#searchsubmit, .btn-info[disabled]:active, .comment-respond [disabled]#submit:active, #wp-calendar td a[disabled]:active, #searchform [disabled]#searchsubmit:active, .btn-info[disabled].active, .comment-respond [disabled].active#submit, #wp-calendar td a[disabled].active, #searchform [disabled].active#searchsubmit,
+  
+  .btn-info.disabled,
+  .comment-respond .disabled#submit,
+  #wp-calendar td a.disabled,
+  #searchform .disabled#searchsubmit, .btn-info.disabled:hover, .comment-respond .disabled#submit:hover, #wp-calendar td a.disabled:hover, #searchform .disabled#searchsubmit:hover, .btn-info.disabled:focus, .comment-respond .disabled#submit:focus, #wp-calendar td a.disabled:focus, #searchform .disabled#searchsubmit:focus, .btn-info.disabled.focus, .comment-respond .disabled.focus#submit, #wp-calendar td a.disabled.focus, #searchform .disabled.focus#searchsubmit, .btn-info.disabled:active, .comment-respond .disabled#submit:active, #wp-calendar td a.disabled:active, #searchform .disabled#searchsubmit:active, .btn-info.disabled.active, .comment-respond .disabled.active#submit, #wp-calendar td a.disabled.active, #searchform .disabled.active#searchsubmit,
+  .btn-info[disabled],
+  .comment-respond #submit[disabled],
+  #wp-calendar td a[disabled],
+  #searchform #searchsubmit[disabled], .btn-info[disabled]:hover, .comment-respond #submit[disabled]:hover, #wp-calendar td a[disabled]:hover, #searchform #searchsubmit[disabled]:hover, .btn-info[disabled]:focus, .comment-respond #submit[disabled]:focus, #wp-calendar td a[disabled]:focus, #searchform #searchsubmit[disabled]:focus, .btn-info[disabled].focus, .comment-respond #submit[disabled].focus, #wp-calendar td a[disabled].focus, #searchform #searchsubmit[disabled].focus, .btn-info[disabled]:active, .comment-respond #submit[disabled]:active, #wp-calendar td a[disabled]:active, #searchform #searchsubmit[disabled]:active, .btn-info[disabled].active, .comment-respond #submit[disabled].active, #wp-calendar td a[disabled].active, #searchform #searchsubmit[disabled].active,
   fieldset[disabled] .btn-info,
-  fieldset[disabled] .comment-respond #submit, .comment-respond
-  fieldset[disabled] #submit,
-  fieldset[disabled] #wp-calendar td a, #wp-calendar td
-  fieldset[disabled] a,
-  fieldset[disabled] #searchform #searchsubmit, #searchform
-  fieldset[disabled] #searchsubmit,
+  fieldset[disabled] .comment-respond #submit,
+  .comment-respond fieldset[disabled] #submit,
+  fieldset[disabled] #wp-calendar td a,
+  #wp-calendar td fieldset[disabled] a,
+  fieldset[disabled] #searchform #searchsubmit,
+  #searchform fieldset[disabled] #searchsubmit,
   fieldset[disabled] .btn-info:hover,
-  fieldset[disabled] .comment-respond #submit:hover, .comment-respond
-  fieldset[disabled] #submit:hover,
-  fieldset[disabled] #wp-calendar td a:hover, #wp-calendar td
-  fieldset[disabled] a:hover,
-  fieldset[disabled] #searchform #searchsubmit:hover, #searchform
-  fieldset[disabled] #searchsubmit:hover,
+  fieldset[disabled] .comment-respond #submit:hover,
+  .comment-respond fieldset[disabled] #submit:hover,
+  fieldset[disabled] #wp-calendar td a:hover,
+  #wp-calendar td fieldset[disabled] a:hover,
+  fieldset[disabled] #searchform #searchsubmit:hover,
+  #searchform fieldset[disabled] #searchsubmit:hover,
   fieldset[disabled] .btn-info:focus,
-  fieldset[disabled] .comment-respond #submit:focus, .comment-respond
-  fieldset[disabled] #submit:focus,
-  fieldset[disabled] #wp-calendar td a:focus, #wp-calendar td
-  fieldset[disabled] a:focus,
-  fieldset[disabled] #searchform #searchsubmit:focus, #searchform
-  fieldset[disabled] #searchsubmit:focus,
+  fieldset[disabled] .comment-respond #submit:focus,
+  .comment-respond fieldset[disabled] #submit:focus,
+  fieldset[disabled] #wp-calendar td a:focus,
+  #wp-calendar td fieldset[disabled] a:focus,
+  fieldset[disabled] #searchform #searchsubmit:focus,
+  #searchform fieldset[disabled] #searchsubmit:focus,
   fieldset[disabled] .btn-info.focus,
-  fieldset[disabled] .comment-respond .focus#submit, .comment-respond
-  fieldset[disabled] .focus#submit,
-  fieldset[disabled] #wp-calendar td a.focus, #wp-calendar td
-  fieldset[disabled] a.focus,
-  fieldset[disabled] #searchform .focus#searchsubmit, #searchform
-  fieldset[disabled] .focus#searchsubmit,
+  fieldset[disabled] .comment-respond .focus#submit,
+  .comment-respond fieldset[disabled] .focus#submit,
+  fieldset[disabled] #wp-calendar td a.focus,
+  #wp-calendar td fieldset[disabled] a.focus,
+  fieldset[disabled] #searchform .focus#searchsubmit,
+  #searchform fieldset[disabled] .focus#searchsubmit,
   fieldset[disabled] .btn-info:active,
-  fieldset[disabled] .comment-respond #submit:active, .comment-respond
-  fieldset[disabled] #submit:active,
-  fieldset[disabled] #wp-calendar td a:active, #wp-calendar td
-  fieldset[disabled] a:active,
-  fieldset[disabled] #searchform #searchsubmit:active, #searchform
-  fieldset[disabled] #searchsubmit:active,
+  fieldset[disabled] .comment-respond #submit:active,
+  .comment-respond fieldset[disabled] #submit:active,
+  fieldset[disabled] #wp-calendar td a:active,
+  #wp-calendar td fieldset[disabled] a:active,
+  fieldset[disabled] #searchform #searchsubmit:active,
+  #searchform fieldset[disabled] #searchsubmit:active,
   fieldset[disabled] .btn-info.active,
-  fieldset[disabled] .comment-respond .active#submit, .comment-respond
-  fieldset[disabled] .active#submit,
-  fieldset[disabled] #wp-calendar td a.active, #wp-calendar td
-  fieldset[disabled] a.active,
-  fieldset[disabled] #searchform .active#searchsubmit, #searchform
-  fieldset[disabled] .active#searchsubmit {
+  fieldset[disabled] .comment-respond .active#submit,
+  .comment-respond fieldset[disabled] .active#submit,
+  fieldset[disabled] #wp-calendar td a.active,
+  #wp-calendar td fieldset[disabled] a.active,
+  fieldset[disabled] #searchform .active#searchsubmit,
+  #searchform fieldset[disabled] .active#searchsubmit {
     background-color: #2aabd2;
     background-image: none; }
 
 .btn-warning, #wp-calendar #prev a, #wp-calendar #next a {
-  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
-  background-image: -o-linear-gradient(top, #f0ad4e 0%, #eb9316 100%);
-  background-image: linear-gradient(to bottom, #f0ad4e 0%, #eb9316 100%);
+  background-image: -webkit-linear-gradient(top, #ff8700 0%, #c26700 100%);
+  background-image: -o-linear-gradient(top, #ff8700 0%, #c26700 100%);
+  background-image: linear-gradient(to bottom, #ff8700 0%, #c26700 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF0AD4E', endColorstr='#FFEB9316', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF8700', endColorstr='#FFC26700', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #e38d13; }
+  border-color: #b86100; }
   .btn-warning:hover, #wp-calendar #prev a:hover, #wp-calendar #next a:hover, .btn-warning:focus, #wp-calendar #prev a:focus, #wp-calendar #next a:focus {
-    background-color: #eb9316;
+    background-color: #c26700;
     background-position: 0 -15px; }
   .btn-warning:active, #wp-calendar #prev a:active, #wp-calendar #next a:active, .btn-warning.active, #wp-calendar #prev a.active, #wp-calendar #next a.active {
-    background-color: #eb9316;
-    border-color: #e38d13; }
-  .btn-warning.disabled, #wp-calendar #prev a.disabled, #wp-calendar #next a.disabled, .btn-warning.disabled:hover, #wp-calendar #prev a.disabled:hover, #wp-calendar #next a.disabled:hover, .btn-warning.disabled:focus, #wp-calendar #prev a.disabled:focus, #wp-calendar #next a.disabled:focus, .btn-warning.disabled.focus, #wp-calendar #prev a.disabled.focus, #wp-calendar #next a.disabled.focus, .btn-warning.disabled:active, #wp-calendar #prev a.disabled:active, #wp-calendar #next a.disabled:active, .btn-warning.disabled.active, #wp-calendar #prev a.disabled.active, #wp-calendar #next a.disabled.active, .btn-warning[disabled], #wp-calendar #prev a[disabled], #wp-calendar #next a[disabled], .btn-warning[disabled]:hover, #wp-calendar #prev a[disabled]:hover, #wp-calendar #next a[disabled]:hover, .btn-warning[disabled]:focus, #wp-calendar #prev a[disabled]:focus, #wp-calendar #next a[disabled]:focus, .btn-warning[disabled].focus, #wp-calendar #prev a[disabled].focus, #wp-calendar #next a[disabled].focus, .btn-warning[disabled]:active, #wp-calendar #prev a[disabled]:active, #wp-calendar #next a[disabled]:active, .btn-warning[disabled].active, #wp-calendar #prev a[disabled].active, #wp-calendar #next a[disabled].active,
+    background-color: #c26700;
+    border-color: #b86100; }
+  
+  .btn-warning.disabled,
+  #wp-calendar #prev a.disabled,
+  #wp-calendar #next a.disabled, .btn-warning.disabled:hover, #wp-calendar #prev a.disabled:hover, #wp-calendar #next a.disabled:hover, .btn-warning.disabled:focus, #wp-calendar #prev a.disabled:focus, #wp-calendar #next a.disabled:focus, .btn-warning.disabled.focus, #wp-calendar #prev a.disabled.focus, #wp-calendar #next a.disabled.focus, .btn-warning.disabled:active, #wp-calendar #prev a.disabled:active, #wp-calendar #next a.disabled:active, .btn-warning.disabled.active, #wp-calendar #prev a.disabled.active, #wp-calendar #next a.disabled.active,
+  .btn-warning[disabled],
+  #wp-calendar #prev a[disabled],
+  #wp-calendar #next a[disabled], .btn-warning[disabled]:hover, #wp-calendar #prev a[disabled]:hover, #wp-calendar #next a[disabled]:hover, .btn-warning[disabled]:focus, #wp-calendar #prev a[disabled]:focus, #wp-calendar #next a[disabled]:focus, .btn-warning[disabled].focus, #wp-calendar #prev a[disabled].focus, #wp-calendar #next a[disabled].focus, .btn-warning[disabled]:active, #wp-calendar #prev a[disabled]:active, #wp-calendar #next a[disabled]:active, .btn-warning[disabled].active, #wp-calendar #prev a[disabled].active, #wp-calendar #next a[disabled].active,
   fieldset[disabled] .btn-warning,
-  fieldset[disabled] #wp-calendar #prev a, #wp-calendar #prev
-  fieldset[disabled] a,
-  fieldset[disabled] #wp-calendar #next a, #wp-calendar #next
-  fieldset[disabled] a,
+  fieldset[disabled] #wp-calendar #prev a,
+  #wp-calendar #prev fieldset[disabled] a,
+  fieldset[disabled] #wp-calendar #next a,
+  #wp-calendar #next fieldset[disabled] a,
   fieldset[disabled] .btn-warning:hover,
-  fieldset[disabled] #wp-calendar #prev a:hover, #wp-calendar #prev
-  fieldset[disabled] a:hover,
-  fieldset[disabled] #wp-calendar #next a:hover, #wp-calendar #next
-  fieldset[disabled] a:hover,
+  fieldset[disabled] #wp-calendar #prev a:hover,
+  #wp-calendar #prev fieldset[disabled] a:hover,
+  fieldset[disabled] #wp-calendar #next a:hover,
+  #wp-calendar #next fieldset[disabled] a:hover,
   fieldset[disabled] .btn-warning:focus,
-  fieldset[disabled] #wp-calendar #prev a:focus, #wp-calendar #prev
-  fieldset[disabled] a:focus,
-  fieldset[disabled] #wp-calendar #next a:focus, #wp-calendar #next
-  fieldset[disabled] a:focus,
+  fieldset[disabled] #wp-calendar #prev a:focus,
+  #wp-calendar #prev fieldset[disabled] a:focus,
+  fieldset[disabled] #wp-calendar #next a:focus,
+  #wp-calendar #next fieldset[disabled] a:focus,
   fieldset[disabled] .btn-warning.focus,
-  fieldset[disabled] #wp-calendar #prev a.focus, #wp-calendar #prev
-  fieldset[disabled] a.focus,
-  fieldset[disabled] #wp-calendar #next a.focus, #wp-calendar #next
-  fieldset[disabled] a.focus,
+  fieldset[disabled] #wp-calendar #prev a.focus,
+  #wp-calendar #prev fieldset[disabled] a.focus,
+  fieldset[disabled] #wp-calendar #next a.focus,
+  #wp-calendar #next fieldset[disabled] a.focus,
   fieldset[disabled] .btn-warning:active,
-  fieldset[disabled] #wp-calendar #prev a:active, #wp-calendar #prev
-  fieldset[disabled] a:active,
-  fieldset[disabled] #wp-calendar #next a:active, #wp-calendar #next
-  fieldset[disabled] a:active,
+  fieldset[disabled] #wp-calendar #prev a:active,
+  #wp-calendar #prev fieldset[disabled] a:active,
+  fieldset[disabled] #wp-calendar #next a:active,
+  #wp-calendar #next fieldset[disabled] a:active,
   fieldset[disabled] .btn-warning.active,
-  fieldset[disabled] #wp-calendar #prev a.active, #wp-calendar #prev
-  fieldset[disabled] a.active,
-  fieldset[disabled] #wp-calendar #next a.active, #wp-calendar #next
-  fieldset[disabled] a.active {
-    background-color: #eb9316;
+  fieldset[disabled] #wp-calendar #prev a.active,
+  #wp-calendar #prev fieldset[disabled] a.active,
+  fieldset[disabled] #wp-calendar #next a.active,
+  #wp-calendar #next fieldset[disabled] a.active {
+    background-color: #c26700;
     background-image: none; }
 
 .btn-danger {
@@ -6609,8 +6664,7 @@ button.close {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075); }
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
   background-image: -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
   background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
@@ -6618,33 +6672,31 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF5F5F5', endColorstr='#FFE8E8E8', GradientType=0);
   background-color: #e8e8e8; }
 
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-  background-image: -o-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+  background-image: linear-gradient(to bottom, #337ab7 0%, #2d6da3 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2E6DA4', GradientType=0);
-  background-color: #2e6da4; }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2D6DA3', GradientType=0);
+  background-color: #2d6da3; }
 
 .navbar-default {
-  background-image: -webkit-linear-gradient(top, white 0%, #f8f8f8 100%);
-  background-image: -o-linear-gradient(top, white 0%, #f8f8f8 100%);
-  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
+  background-image: -webkit-linear-gradient(top, white 0%, #f9fafb 100%);
+  background-image: -o-linear-gradient(top, white 0%, #f9fafb 100%);
+  background-image: linear-gradient(to bottom, white 0%, #f9fafb 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF8F8F8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF9FAFB', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075); }
   .navbar-default .navbar-nav > .open > a,
   .navbar-default .navbar-nav > .active > a {
-    background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
-    background-image: -o-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
-    background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+    background-image: -webkit-linear-gradient(top, #d6dde4 0%, #dfe4ea 100%);
+    background-image: -o-linear-gradient(top, #d6dde4 0%, #dfe4ea 100%);
+    background-image: linear-gradient(to bottom, #d6dde4 0%, #dfe4ea 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDBDBDB', endColorstr='#FFE2E2E2', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD6DDE4', endColorstr='#FFDFE4EA', GradientType=0);
     -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075); }
 
@@ -6681,11 +6733,11 @@ button.close {
 @media (max-width: 767px) {
   .navbar .navbar-nav .open .dropdown-menu > .active > a, .navbar .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-    background-image: -o-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-    background-image: linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
+    background-image: -webkit-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+    background-image: -o-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+    background-image: linear-gradient(to bottom, #337ab7 0%, #2d6da3 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2E6DA4', GradientType=0); } }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2D6DA3', GradientType=0); } }
 
 .alert {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -6732,11 +6784,11 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBEBEB', endColorstr='#FFF5F5F5', GradientType=0); }
 
 .progress-bar {
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #286090 100%);
-  background-image: -o-linear-gradient(top, #337ab7 0%, #286090 100%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #286090 100%);
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #285f8f 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0%, #285f8f 100%);
+  background-image: linear-gradient(to bottom, #337ab7 0%, #285f8f 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF286090', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF285F8F', GradientType=0); }
 
 .progress-bar-success {
   background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
@@ -6753,11 +6805,11 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5BC0DE', endColorstr='#FF31B0D5', GradientType=0); }
 
 .progress-bar-warning {
-  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
-  background-image: -o-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
-  background-image: linear-gradient(to bottom, #f0ad4e 0%, #ec971f 100%);
+  background-image: -webkit-linear-gradient(top, #ff8700 0%, #cc6c00 100%);
+  background-image: -o-linear-gradient(top, #ff8700 0%, #cc6c00 100%);
+  background-image: linear-gradient(to bottom, #ff8700 0%, #cc6c00 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF0AD4E', endColorstr='#FFEC971F', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF8700', endColorstr='#FFCC6C00', GradientType=0); }
 
 .progress-bar-danger {
   background-image: -webkit-linear-gradient(top, #d9534f 0%, #c9302c 100%);
@@ -6776,16 +6828,14 @@ button.close {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075); }
 
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 #286090;
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2b669a 100%);
-  background-image: -o-linear-gradient(top, #337ab7 0%, #2b669a 100%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #2b669a 100%);
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  text-shadow: 0 -1px 0 #285f8f;
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2b6699 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0%, #2b6699 100%);
+  background-image: linear-gradient(to bottom, #337ab7 0%, #2b6699 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2B669A', GradientType=0);
-  border-color: #2b669a; }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2B6699', GradientType=0);
+  border-color: #2b6699; }
   .list-group-item.active .badge,
   .list-group-item.active:hover .badge,
   .list-group-item.active:focus .badge {
@@ -6803,11 +6853,11 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF5F5F5', endColorstr='#FFE8E8E8', GradientType=0); }
 
 .panel-primary > .panel-heading {
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-  background-image: -o-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+  background-image: -o-linear-gradient(top, #337ab7 0%, #2d6da3 100%);
+  background-image: linear-gradient(to bottom, #337ab7 0%, #2d6da3 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2E6DA4', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF2D6DA3', GradientType=0); }
 
 .panel-success > .panel-heading {
   background-image: -webkit-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
@@ -6838,12 +6888,12 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2DEDE', endColorstr='#FFEBCCCC', GradientType=0); }
 
 .well {
-  background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
-  background-image: -o-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
-  background-image: linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%);
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+  background-image: -o-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+  background-image: linear-gradient(to bottom, #f2f2f2 0%, #fff 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE8E8E8', endColorstr='#FFF5F5F5', GradientType=0);
-  border-color: gainsboro;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFFFFFFF', GradientType=0);
+  border-color: #e6e6e6;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
